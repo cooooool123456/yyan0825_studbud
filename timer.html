@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/timer.css" type="text/css" />
+  <title>Timer</title>
+</head>
+
+<body>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
+    <nav id="nav-bar" class="nav-link">
+      <a href="index.html" class="nav-link">Easytask</a> |
+      <a href="list.html" class="nav-link">Task-list</a> |
+      <a href="my.html" class="nav-link">My</a> |
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+
+  </header>
+
+  <div class="timer">
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
+  </div>
+
+  <center>
+    <div class="home">
+      <div class="box">
+        <div id="s" class="time"></div>
+        <div class="boxx">:</div>
+        <div id="f" class="time"></div>
+        <div class="boxx">:</div>
+        <div id="m" class="time"></div>
+      </div>
+      <div class="butt">
+        <button onclick="bulle(0)">Pause</button>
+        <button onclick="bulle(1)">Start</button>
+        <button onclick="bulle(3)">Reset</button>
+      </div>
+    </div>
+    <div id="fg" class="fg"></div>
+  </center>
+  <script>
+    let timef = 0;
+    let times = 0;
+    let timem = 0;
+    let zt_ks = false;
+    let fg = Array();
+    let defaultDuration = 1000 * 60 * 1;
+    let defaultStopDuration = 1000 * 60 * 2;
+    let StopNumber = 4;
+    let defaultDurationTime = 0;
+    function fill0 (num) {
+      if (num >= 0 && num < 10) {
+        return '0' + num
+      }
+      return num
+    }
+
+    setInterval(() => {
+      if (zt_ks) {
+        defaultDurationTime++;
+        timem++;
+        if (defaultDurationTime * 1000 === defaultDuration) {
+          timing();
+        }
+      }
+      if (timem == 60) {
+        timem = 0;
+        timef++;
+        if (timef == 60) {
+          timef = 0;
+          times++;
+        }
+      }
+      document.getElementById("s").innerHTML = fill0(times);
+      document.getElementById("f").innerHTML = fill0(timef);
+      document.getElementById("m").innerHTML = fill0(timem);
+
+    }, 1000);
+
+    function timing () {
+      alert('停止');
+      zt_ks = false;
+      StopNumber--;
+      if (StopNumber >= 0) {
+        setTimeout(() => {
+          zt_ks = true;
+          alert('开始');
+        }, defaultStopDuration)
+
+      }
+
+
+    }
+    function dele (i) {
+      fg[i] = "";
+      document.getElementById("fg").innerHTML = "";
+      for (let i = 0; i < fg.length; i++)
+        document.getElementById("fg").innerHTML += fg[i];
+      if (document.getElementById("fg").innerHTML == "") {
+        fg = Array();
+        document.getElementById("fg").style.display = "none";
+      }
+
+    }
+
+    function bulle (i) {
+      switch (i) {
+        case 0:
+          zt_ks = false;
+          break;
+        case 1:
+          zt_ks = true;
+          break;
+        case 2:
+          fg.push("<div class='fgbox'>" + "<div class='fge'>" + times + ":" + timef + ":" + timem + "</div>" + "<button class='fgbulles' οnclick='dele(" + fg.length + ")'>X</button>" + "</div>");
+          document.getElementById("fg").innerHTML += fg[fg.length - 1];
+          document.getElementById("fg").style.display = "block";
+          break;
+        case 3:
+          zt_ks = false;
+          timef = 0;
+          times = 0;
+          timem = 0;
+          fg = Array();
+          document.getElementById("fg").innerHTML = "";
+          document.getElementById("fg").style.display = "none";
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>

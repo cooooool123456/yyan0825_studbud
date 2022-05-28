@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/login.css">
+  <title>login</title>
+</head>
+
+<body>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
+    <nav id="nav-bar" class="nav-link">
+      <a href="index.html" class="nav-link">Easytask</a> |
+      <a href="list.html" class="nav-link">Task-list</a> |
+      <a href="my.html" class="nav-link">My</a> |
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+
+  </header>
+
+  <div class="timer">
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
+  </div>
+<div>
+<div class="flex-center">
+    <div id="loginDiv">
+      <form action="" id="form">
+        <div class="title" style="text-align: center;color: aliceblue;">Login</div>
+        <p class="p1">Email : <input id="email" type="text"></p>
+        <p>Password :<input id="password" type="password"></p>
+        <div style="text-align: center;margin-top: 1.875rem;">
+          <input type="button" class="button" value="Login" onclick="login_click()">
+          <input type="button" class="button" value="Register" onclick="register_click()">
+        </div>
+      </form>
+    
+      <script>
+        var sex = localStorage.getItem("sex");
+        var password = localStorage.getItem("password");
+        var email = localStorage.getItem("email");
+        var username = localStorage.getItem("username");
+        console.log(sex);
+
+        function register_click () {
+          window.location.href = "register.html";
+        }
+
+
+        function login_click () {
+
+          var email1 = document.getElementById("email").value;
+          var password1 = document.getElementById("password").value;
+
+
+          if (email1 != '' && password1 != '') {
+            if (email1 == email && password == password1) {
+              window.location.href = "my.html";
+            }
+            else {
+              alert("Email or password is wrong, please re-enter!");
+            }
+          }
+          else {
+            alert("Email or password cannot be empty!");
+          }
+
+        }
+      </script>
+    </div>
+</div>
+</div>
+
+
+</body>
+
+</html>

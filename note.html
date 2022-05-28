@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/note.css" type="text/css" />
+  <title>Acronym Maker</title>
+
+</head>
+
+<body>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
+    <nav id="nav-bar" class="nav-link">
+      <a href="index.html" class="nav-link">Easytask</a> |
+      <a href="list.html" class="nav-link">Task-list</a> |
+      <a href="my.html" class="nav-link">My</a> |
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+
+  </header>
+
+  <div class="timer">
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
+  </div>
+  <div class="flex-center flex-column container">
+    <div class="search-box flex-center">
+      <input id="input" type="text">
+      <button onclick="select()" class="search">search</button>
+    </div>
+    <div id="content" class="flex-column content">
+      <h3 id="word"></h3>
+    </div>
+
+  </div>
+  <script>
+    async function select () {
+      const val = document.getElementById('input').value
+      const fetchData = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${val}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const fetchResponse = await fetchData.json();
+      console.log(fetchResponse[0]);
+      const { word, meanings } = fetchResponse[0];
+      document.getElementById('word').innerHTML = word
+      console.log(meanings);
+      const result = meanings.map((item,key) => {
+        // console.log(item.partOfSpeech);//词性
+        // console.log(item.definitions); //定义
+        // console.log(item.synonyms); // 同义词
+        if (key === 0) {
+          document.getElementById("content").innerHTML +=
+            `
+          partOfSpeech: ${JSON.stringify(item.partOfSpeech)},
+          <br>
+          definitions: ${JSON.stringify(item.definitions[0].definition)},
+          <br>
+          synonyms: ${JSON.stringify(item.synonyms[0])}
+          <br>
+        `
+
+        }
+
+        return `
+          partOfSpeech: ${JSON.stringify(item.partOfSpeech)},
+          definitions: ${JSON.stringify(item.definitions[0])},
+          synonyms: ${JSON.stringify(item.synonyms[0])}
+        `
+      })
+      console.log(result);
+    }
+
+  </script>
+
+</body>
+
+</html>

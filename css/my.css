@@ -1,0 +1,83 @@
+
+@media screen  and (min-width:1500px) and (max-width:1700px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 16px;
+    }
+} 
+@media screen  and (min-width:1200px) and (max-width:1500px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 15px;
+    }
+} 
+@media screen  and (min-width:1000px) and (max-width:1200px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 14px;
+    }
+} 
+
+/* 电脑 */
+@media screen  and (min-width:500px)  and (max-width:1920px) { 
+
+    .my{
+        margin-top: 18rem;
+        border-radius: 1rem;
+    }
+
+}
+/* 手机 */
+@media screen  and (min-width:200px)  and (max-width:500px) {
+    /* CSS样式 */
+    
+    html {
+        font-size: 16px;
+    }
+
+    .my{
+        margin-top: 12.5rem;
+        border-radius: 1rem;
+    }
+} 
+
+
+html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    -moz-background-size: 100% 100%;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    
+}
+input{
+    border:none; border-bottom:1px solid rgb(10, 10, 10);
+    width: 18.75rem;
+}
+p{
+    text-align: center;
+    color: rgb(116, 113, 113);
+}
+.my{
+
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+}       
+
+input::-ms-input-placeholder{text-align: center;}
+input::-webkit-input-placeholder{text-align: center;}

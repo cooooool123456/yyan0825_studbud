@@ -16,49 +16,56 @@
   <meta name="browsermode" content="application">
   <meta name="x5-page-mode" content="app">
   <meta name="msapplication-tap-highlight" content="no">
-  <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/home.css" type="text/css" />
   <title>Easytask</title>
+  <script src="js/audio.js"></script>
 </head>
 
 <body>
-  <p id="logo">E</p>
-  <div>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
     <nav id="nav-bar" class="nav-link">
       <a href="index.html" class="nav-link">Easytask</a> |
       <a href="list.html" class="nav-link">Task-list</a> |
       <a href="my.html" class="nav-link">My</a> |
       <a href="login.html" class="nav-link">Login</a>
     </nav>
-  </div>
-  <br><br><br>
-  <audio controls>
-    <source src="sound.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+
+  </header>
+
   <div class="timer">
-    <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-    <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
   </div>
-  <br><br>
-  <center>
-    <h1>Welcome To Easytask</h1>
-    <h2>Choose Your Domain</h2>
-    <table>
-      <tr>
-        <th><img src="icon/icon11.png" /></th>
-        <th><img src="icon/icon12.png" /></th>
-        <th><img src="icon/icon13.png" /></th>
-      </tr>
-      <tr>
-        <th><a href="assign.html">Assign Tasks</a></th>
-        <th><a href="list.html">Check Tasks</a></th>
-        <th><a href="modify.html">Modify Tasks</a></th>
-      </tr>
-    </table>
-    <br><br>
-    <br><br>
-    <img src="img/image.png">
-  </center>
+
+  <div class="home">
+    <div class="title1">Welcome To Easytask</div>
+    <div class="title2">Choose Your Domain</div>
+    <div class="menu">
+      <div class="item-menu">
+        <img src="icon/icon11.png" />
+        <a href="assign.html">Assign Tasks</a>
+      </div>
+      <div class="item-menu">
+        <img src="icon/icon12.png" />
+        <a href="list.html">Assign Tasks</a>
+      </div>
+      <div class="item-menu">
+        <img src="icon/icon13.png" />
+        <a href="modify.html">Assign Tasks</a>
+      </div>
+    </div>
+    <div class="bottom-img">
+      <img src="img/image.png">
+    </div>
+  </div>
 </body>
 
 </html>

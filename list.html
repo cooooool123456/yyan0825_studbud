@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="./css/index.css" type="text/css" />
+  <link rel="stylesheet" href="./css/List.css" type="text/css">
+  <title>Task list</title>
+  <script src="js/audio.js"></script>
+</head>
+
+<body>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
+    <nav id="nav-bar" class="nav-link">
+      <a href="index.html" class="nav-link">Easytask</a> |
+      <a href="list.html" class="nav-link">Task-list</a> |
+      <a href="my.html" class="nav-link">My</a> |
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+
+  </header>
+
+  <div class="timer">
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
+  </div>
+
+
+
+  <center>
+    <h1>Task List</h1>
+    <table id="list">
+      <th>name</th>
+      <th>month</th>
+      <th>date</th>
+      <th>priority</th>
+      <th>time</th>
+    </table>
+  </center>
+
+  <body>
+
+    <script>
+      var list = localStorage.getItem("list");
+      var array = list.split(";");
+      var content = document.getElementById("list").innerHTML.split("</tbody>")[0];
+      for (var i = 0; i < array.length; i++) {
+        var arr = array[i].split("-");
+        if (typeof (arr[0]) != "undefined" && typeof (arr[1]) != "undefined" && typeof (arr[2]) != "undefined" && typeof (arr[3]) != "undefined" && typeof (arr[4]) != "undefined") {
+          var tmp = "<tr>";
+          tmp += "<td>" + arr[0] + "</td>";
+          tmp += "<td>" + arr[1] + "</td>";
+          tmp += "<td>" + arr[2] + "</td>";
+          tmp += "<td>" + arr[3] + "</td>";
+          tmp += "<td>" + arr[4] + "</td>";
+          tmp += "</tr>"
+          content += tmp;
+        }
+      }
+      content += "</tbody></table>";
+      document.getElementById("list").innerHTML = content;
+    </script>
+  </body>
+
+  </html>

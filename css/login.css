@@ -1,0 +1,155 @@
+
+
+@media screen  and (min-width:1500px) and (max-width:1700px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 16px;
+    }
+} 
+@media screen  and (min-width:1200px) and (max-width:1500px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 15px;
+    }
+} 
+@media screen  and (min-width:1000px) and (max-width:1200px){
+    /* CSS样式 */
+    
+    html {
+        font-size: 14px;
+    }
+} 
+
+/* 电脑 */
+@media screen  and (min-width:500px)  and (max-width:1920px) { 
+    #loginDiv {
+        margin-top: 8rem;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    #loginDiv .title {
+        
+        font-size: 1.875rem;
+    }
+    #loginDiv p {
+        display: flex;
+        justify-content: flex-end;
+    }
+    input {
+        margin-left: .9375rem;
+        border-radius: .3125rem;
+        border-style: hidden;
+        height:3.125rem;
+        width: 25rem;
+        background-color: rgba(216, 191, 216, 0.5);
+        outline: none;
+        color: #f0edf3;
+        padding-left: .625rem;
+    }
+     
+    .button {
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 12.5rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
+}
+/* 手机 */
+@media screen  and (min-width:200px)  and (max-width:500px) {
+    /* CSS样式 */
+    
+    html {
+        font-size: 16px;
+    }
+
+
+    #loginDiv {
+        margin-top: 8rem;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 18rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    #loginDiv .title {
+        margin-top: .625rem;
+        font-size: 1.5625rem;
+    }
+    #loginDiv .p1 {
+        display: flex;
+        justify-content: flex-end;
+    }
+    #loginDiv p {
+        font-size: .9375rem;
+    }
+    input {
+        margin-left: .9375rem;
+        border-radius: .3125rem;
+        border-style: hidden;
+        height: 1.875rem;
+        width: 8.75rem;
+        background-color: rgba(216, 191, 216, 0.5);
+        outline: none;
+        color: #f0edf3;
+        padding-left: .625rem;
+    }
+     
+    .button {
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
+} 
+
+
+
+
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    -moz-background-size: 100% 100%;
+   
+}
+ 
+body {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+ 
+
+ 
+
+p {
+    margin-top: 1.875rem;
+    color: azure;
+}
+ 
+
+
+input::-ms-input-placeholder{text-align: center;}
+input::-webkit-input-placeholder{text-align: center;}

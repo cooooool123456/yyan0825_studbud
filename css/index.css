@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 28px;
+}
+
+img {
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+  color: #6b6c6e;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.box-shadow {
+  box-shadow: 0 0 10px #ddd;
+  background-color: #fff;
+}
+
+.bor-radius {
+  border-radius: 10px;
+}
+
+.pt {
+  padding-top: 10px !important;
+}
+.pt0 {
+  padding-top: 0 !important;
+}
+.pb {
+  padding-bottom: 10px !important;
+}
+.pl {
+  padding-left: 10px !important;
+}
+.pl0 {
+  padding-left: 0 !important;
+}
+.pr {
+  padding-right: 10px !important;
+}
+.pl0 {
+  padding-right: 0 !important;
+}
+.mt {
+  margin-top: 10px !important;
+}
+.mb {
+  margin-bottom: 10px !important;
+}
+.ml {
+  margin-left: 10px !important;
+}
+.mr {
+  margin-right: 10px !important;
+}
+
+.flex,
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex.sb,
+.flex-row.sb {
+  justify-content: space-between;
+}
+.flex.fs,
+.flex-row.fs {
+  justify-content: flex-start;
+}
+.flex.fe,
+.flex-row.fe {
+  justify-content: flex-end;
+}
+.flex.ai-fs,
+.flex-row.ai-fs {
+  align-items: flex-start;
+}
+.flex.ai-fe,
+.flex-row.ai-fe {
+  align-items: flex-end;
+}
+.flex-sb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column.sb {
+  justify-content: space-between;
+}
+.flex-column.fs {
+  justify-content: flex-start;
+}
+.flex-column.fe {
+  justify-content: flex-end;
+}
+.flex-column.ai-fs {
+  align-items: flex-start;
+}
+.flex-column.ai-fe {
+  align-items: flex-end;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-left {
+  flex: 1;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+body {
+  background-size: 100% 100%;
+  background: linear-gradient(to bottom, #b7edf7, #eaa4ea);
+  /* background-repeat: no-repeat; */
+}
+
+html {
+  height: 100%;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  padding-top: 0.625rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: end;
+  display: inline;
+  color: aliceblue;
+}
+
+#nav-bar {
+  /* position: fixed; */
+  /* top: 0;
+  right: 0; */
+}
+
+#logo {
+  font-size: 1.25rem;
+  padding-top: 0.625rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: end;
+  display: inline;
+  color: aliceblue;
+}
+
+h1,
+h2 {
+  color: aliceblue;
+}
+
+th {
+  font-size: small;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  width: 1200px;
+  margin: 0 auto;
+}
+.timer {
+  margin: 0 auto;
+}
+/* 电脑 */
+@media screen  and (min-width:500px)  and (max-width:1920px) { 
+    .timer {
+        margin-top: 1.875rem;
+        /* width: 100%; */
+        width:1200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .timer img {
+        width: 3.125rem;
+        cursor: pointer;
+    }
+    .timer div {
+        text-align: right;
+        width: 12.5rem;
+    }
+
+
+
+}
+/* 手机 */
+@media screen  and (min-width:200px)  and (max-width:500px) {
+    /* CSS样式 */
+    
+    html {
+        font-size: 16px;
+    }
+    .timer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top:1.25rem;
+    } 
+    .timer img{
+        width: 1.875rem;
+    }
+    .timer div {
+        text-align: right;
+        width: 6.25rem;
+    }
+} 

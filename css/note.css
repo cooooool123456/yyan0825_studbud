@@ -1,0 +1,127 @@
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 14px;
+  }
+}
+
+/* 电脑 */
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+  table {
+    text-align: center;
+    width: 80%;
+  }
+  th {
+    background-color: #96c7ed;
+    color: #000000;
+    font-size: 1.5rem;
+  }
+  .title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.875rem;
+    margin: 0.9375rem 0px;
+  }
+  input {
+    width: 25rem;
+    height: 3.125rem;
+    font-size: 1.5rem;
+  }
+  .login_button {
+    width: 6.25rem;
+    height: 1.5625rem;
+    font-size: 0.9375rem;
+    border-radius: 0.625rem;
+  }
+  .login_button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .container {
+    margin: 0 auto;
+    margin-top: 8rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    background-color: rgba(75, 81, 95, 0.3);
+    box-shadow: 0.4375rem 0.4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+    border-radius: 0.625rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .search-box {
+    width: 100%;
+    margin-top:3rem;
+    height: 2.6rem;
+  }
+  .search-box input {
+    height: 100%;
+  }
+  .search {
+    width: 8rem;
+    height: 100%;
+    cursor: pointer;
+  }
+  #word {
+    
+  }
+  .content {
+    padding: 0 8rem;
+  }
+}
+/* 手机 */
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 16px;
+  }
+
+  table {
+    text-align: center;
+    width: 100%;
+  }
+  th {
+    background-color: #96c7ed;
+    color: #000000;
+    font-size: 1.25rem;
+  }
+  .title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.4375rem;
+    margin: 0.625rem 0px;
+  }
+  input {
+    width: 18.75rem;
+    height: 1.875rem;
+    font-size: 1.25rem;
+  }
+  .login_button {
+    width: 6.25rem;
+    height: 1.5625rem;
+    font-size: 0.9375rem;
+    border-radius: 0.625rem;
+  }
+  .login_button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}

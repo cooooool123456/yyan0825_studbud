@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="x5-orientation" content="portrait">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="browsermode" content="application">
+  <meta name="x5-page-mode" content="app">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <title>Register</title>
+  <style>
+    html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: url("img/bg.png") no-repeat 0px 0px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+    }
+
+    body {
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid rgb(10, 10, 10);
+      width: 18.75rem;
+    }
+
+    p {
+      text-align: center;
+      color: rgb(116, 113, 113);
+    }
+
+    .register {
+      margin-top: 3.125rem;
+      width: 37.5rem;
+      /*display: flex;*/
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 37.5rem;
+      background-color: white;
+      box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+    }
+
+    .d {
+      margin-top: 3.125rem;
+      width: 18.75rem;
+      /*display: flex;*/
+      justify-content: center;
+      align-items: center;
+      height: 37.5rem;
+      background-color: rgb(167, 150, 150);
+      box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+    }
+
+    .register_button {
+      border-color: cornsilk;
+      background-color: rgba(243, 202, 20, 0.7);
+      color: aliceblue;
+      border-style: hidden;
+      border-radius: .9375rem;
+      width: 11.875rem;
+      height: 1.9375rem;
+      font-size: 1rem;
+    }
+
+    .login_button {
+
+      border: 20px solid white;
+      border-radius: 50%;
+
+      color: rgb(167, 150, 150);
+      ;
+      border-style: hidden;
+      border-radius: .9375rem;
+      width: 6.25rem;
+      height: 1.9375rem;
+      font-size: 1rem;
+
+    }
+
+    .title {
+      color: white;
+      text-align: center;
+    }
+  </style>
+  <style type="text/css">
+    input::-ms-input-placeholder {
+      text-align: center;
+    }
+
+    input::-webkit-input-placeholder {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="logo">E</p>
+  <div>
+    <nav id="nav-bar" class="nav-link">
+      <a href="index.html" class="nav-link">Easytask</a> |
+      <a href="list.html" class="nav-link">Task-list</a> |
+      <a href="my.html" class="nav-link">My</a> |
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
+  </div>
+  <br><br><br>
+  <audio controls>
+    <source src="sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="timer">
+    <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+    <a href="note.html"><img src="icon/note.png" width="50" /></a>
+  </div>
+  <br><br>
+  <center>
+    <div class="register">
+      <h3>Register now</h3>
+      <p>Email</p>
+      <p><input type="text" id="email"></p>
+      <p>Username</p>
+      <p><input type="text" id="username"></p>
+      <p>Gender</p>
+      <p>
+        <span>Male</span>
+        <span><input style="width: auto;" type="radio" name="sex" value="Male" id="sex_man"></span>
+        <span>Female</span>
+        <span><input style="width: auto;" type="radio" name="sex" value="Female" id="sex_woman"></span>
+
+      </p>
+      <p>Password</p>
+      <p><input type="password" id="password1"></p>
+      <p>Confirm password</p>
+      <p><input type="password" id="password2"></p>
+      <p><input type="button" class="register_button" name="register" onclick="register_click()" value="注册"></input></p>
+      <p><button class="login_button" onclick="login_click()">Login</button></p>
+    </div>
+    <script>
+      var flag1 = true;
+      var flag2 = true;
+      var flag3 = true;
+
+      email.onchange = function () {
+        var email = this.value;
+        var emailPattern = /^[a-zA-Z0-9]{1,20}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}$/;
+        if (!(emailPattern.test(email))) {
+          alert("Invalid Email");
+          flag1 = false;
+        }
+        else {
+          flag1 = true;
+        }
+
+      }
+
+
+      username.onchange = function () {
+        var username = this.value;
+        var usernamePattern = /^\S{1,20}$/;
+        if (!usernamePattern.test(username)) {
+          alert("Username length cannot exceed 20");
+          flag2 = false;
+        }
+        else {
+          flag2 = true;
+        }
+
+      }
+
+
+      password1.onchange = function () {
+        var password1 = this.value;
+        var passwordPattern = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,}$/;
+        if (!passwordPattern.test(password1)) {
+          alert("The password format is incorrect, the length is at least 6 digits, and it is a combination of numbers and letters");
+          flag3 = false;
+        }
+        else {
+          flag3 = true;
+        }
+
+      }
+
+      function justify_sex () {
+        var sex;
+        if (document.getElementById("sex_man").checked) {
+          sex = document.getElementById("sex_man").value;
+        }
+        else if (document.getElementById("sex_woman").checked) {
+          sex = document.getElementById("sex_woman").value;
+        }
+        return sex;
+      }
+
+      function register_click () {
+
+        var username = document.getElementById("username").value;
+        var password1 = document.getElementById("password1").value;
+        var password2 = document.getElementById("password2").value;
+        var email = document.getElementById("email").value;
+        var sex = justify_sex();
+
+
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", password1);
+        localStorage.setItem("sex", sex);
+        localStorage.setItem("email", email);
+
+
+        if (flag1 && flag2 && flag3 && password1 != '') {
+          if (password1 == password2) {
+            alert("Registration success!");
+            window.location.href = "login.html";
+          }
+          else {
+            alert("The password entered twice is not the same!");
+          }
+        }
+        else {
+          alert("The information format is incorrect, please enter the correct information!")
+        }
+      }
+
+      function login_click () {
+        window.location.href = "login.html";
+      }
+    </script>
+  </center>
+</body>
+
+</html>
