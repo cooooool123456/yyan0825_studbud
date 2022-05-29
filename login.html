@@ -45,7 +45,6 @@
       <a href="note.html"><img src="icon/note.png" width="50" /></a>
     </div>
   </div>
-<div>
 <div class="flex-center">
     <div id="loginDiv">
       <form action="" id="form">
@@ -57,44 +56,70 @@
           <button type="button" class="button" value="Register" onclick="register_click()">Register</button>
         </div>
       </form>
-    
-      <script>
-        var sex = localStorage.getItem("sex");
-        var password = localStorage.getItem("password");
-        var email = localStorage.getItem("email");
-        var username = localStorage.getItem("username");
-        console.log(sex);
-
-        function register_click () {
-          window.location.href = "register.html";
-        }
-
-
-        function login_click () {
-
-          var email1 = document.getElementById("email").value;
-          var password1 = document.getElementById("password").value;
-
-
-          if (email1 != '' && password1 != '') {
-            if (email1 == email && password == password1) {
-              window.location.href = "my.html";
-            }
-            else {
-              alert("Email or password is wrong, please re-enter!");
-            }
-          }
-          else {
-            alert("Email or password cannot be empty!");
-          }
-
-        }
-      </script>
     </div>
 </div>
+
+<div class="about">
+  <div class="text1">My Aaount</div>
+  <div class="text-email"></div>
+  <div class="text-username"></div>
+  <div class="text-gender"></div>
+  <div class="text-btn">
+    <button type="button" class="button" value="SignOut" onclick="SignOut()">SignOut</button>
+  </div>
 </div>
 
-
 </body>
-
 </html>
+
+<script>
+  var sex = localStorage.getItem("sex");
+  var password = localStorage.getItem("password");
+  var email = localStorage.getItem("email");
+  var username = localStorage.getItem("username");
+  var userLoginStore = sessionStorage.getItem("userLoginStore");
+  if(userLoginStore) {
+    document.querySelector('.about').style.display = "block";
+    document.querySelector('.text-email').textContent = "Email: " + email;
+    document.querySelector('.text-username').textContent = "UserName: " + username;
+    document.querySelector('.text-gender').textContent = "Gender: " + sex;
+    document.getElementById('loginDiv').style.display = "none";
+  }else {
+    document.querySelector('.about').style.display = "none";
+    document.getElementById('loginDiv').style.display = "flex";
+  }
+
+  function register_click () {
+    window.location.href = "register.html";
+  }
+
+
+  function login_click () {
+
+    var email1 = document.getElementById("email").value;
+    var password1 = document.getElementById("password").value;
+
+
+    if (email1 != '' && password1 != '') {
+      if (email1 == email && password == password1) {
+        sessionStorage.setItem("userLoginStore",true);
+        window.location.href = "login.html";
+      }
+      else {
+        alert("Email or password is wrong, please re-enter!");
+      }
+    }
+    else {
+      alert("Email or password cannot be empty!");
+    }
+
+  }
+
+
+  function SignOut() {
+    document.querySelector('.about').style.display = "none";
+    document.getElementById('loginDiv').style.display = "flex";
+    sessionStorage.removeItem('userLoginStore');
+    alert('SignOut is ok!');
+  }
+</script>

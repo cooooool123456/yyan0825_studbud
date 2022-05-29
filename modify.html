@@ -45,8 +45,95 @@
       <a href="note.html"><img src="icon/note.png" width="50" /></a>
     </div>
   </div>
-  
-  
-</body>
 
+  <div class="home">
+      <div class="title">
+          What you need 
+      </div>
+      <div class="age">
+        <span> Age：</span> <input type="text" id="ageVal">
+      </div>
+      <div class="concerns" id="concerns1">
+        <div class="title">Concerns：</div>
+        <div class="text">
+            <a>grammar</a>
+            <a>logic</a>
+            <a>words</a>
+            <a>writing</a>
+        </div>
+      </div>
+      <div class="concerns" id="concerns2">
+        <div class="title">Phrase：</div>
+        <div class="text">
+            <a>English</a>
+            <a>Chinese</a>
+            <a>French</a>
+            <a>...</a>
+        </div>
+      </div>
+      <div class="submit"><button onclick="submit()">complete</button></div>
+  </div>
+
+  <div class="home2">
+     <div class="title1">Suit your choice</div>
+     <div class="text1">1.https://www.baidu.com</div>
+     <div class="text1">2.https://www.google.cn</div>
+     <div class="text1">3.https://www.microsoftstore.com.cn</div>
+     <div class="submit"><button onclick="submit2()">reelect</button></div>
+  </div>
+</body>
 </html>
+
+
+<script>
+
+    let concernsObj = localStorage.getItem('concerns');
+    let concerns = '';
+    let concerns2 = '';
+
+    if (concernsObj) {
+      document.querySelector('.home').style.display = "none";
+      document.querySelector('.home2').style.display = "block";
+    }else {
+      document.querySelector('.home').style.display = "block";
+      document.querySelector('.home2').style.display = "none";
+    }
+
+    function submit(){
+      let ageVal = document.getElementById('ageVal').value;
+      localStorage.setItem('concerns',JSON.stringify({
+        concerns,concerns2,ageVal
+      }))
+      document.querySelector('.home').style.display = "none";
+      document.querySelector('.home2').style.display = "block";
+      alert('submit is ok!');
+    }
+    
+    document.querySelectorAll('.home #concerns1 .text a').forEach(dom => {
+      dom.onclick = function(event) {
+        document.querySelectorAll('.home #concerns1 .text a').forEach(one => {
+          one.style.background = "rgba(75, 81, 95, 0.3)";
+        })
+        event.target.style.background = "red";
+        let concerns = event.target.textContent;
+      }
+    })
+
+    document.querySelectorAll('.home #concerns2 .text a').forEach(dom => {
+      dom.onclick = function(event) {
+        document.querySelectorAll('.home #concerns2 .text a').forEach(one => {
+          one.style.background = "rgba(75, 81, 95, 0.3)";
+        })
+        event.target.style.background = "red";
+        let concerns2 = event.target.textContent;
+      }
+    })
+
+    function submit2(){
+      localStorage.removeItem('concerns');
+      document.querySelector('.home').style.display = "block";
+      document.querySelector('.home2').style.display = "none";
+    }
+
+
+</script>

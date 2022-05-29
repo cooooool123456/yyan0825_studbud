@@ -1,0 +1,208 @@
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 14px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+
+
+  .time {
+    width: 12.375rem;
+    height: 12.375rem;
+    line-height: 12.5rem;
+    font-size: 6.25rem;
+    text-align: center;
+    color: #fff;
+    border: 1px #fff solid;
+    float: left;
+  }
+
+  .box {
+    width: 43.75rem;
+    height: 12.5rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .boxx {
+    width: 3.125rem;
+    height: 12.5rem;
+    float: left;
+    color: #fff;
+    font-size: 6.25rem;
+    text-align: center;
+    line-height: 10.9375rem;
+  }
+
+  .butt {
+    margin: 0 auto;
+    height: 3.125rem;
+    width: 40.9375rem;
+    margin-top: 3.125rem;
+  }
+
+  .butt button {
+    width: 10rem;
+    height: 3.125rem;
+    border: 1px #fff solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.625rem;
+  }
+
+  .fg {
+    width: 18.75rem;
+    background-color: #000;
+    border: 1px #fff solid;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    display: none;
+  }
+
+  .fge {
+    float: left;
+    text-align: center;
+    width: 12.5rem;
+    height: 100%;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+
+  .fgbox {
+    margin: 0.625rem 0px;
+    height: 3.125rem;
+    width: 18.75rem;
+  }
+
+  .fgbulles {
+    width: 6.25rem;
+    float: left;
+    height: 100%;
+    border: 1px #fff solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.25rem;
+  }
+}
+/* phone */
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  /* CSS样式 */
+
+  html {
+    font-size: 16px;
+  }
+
+  .time {
+    width: 30%;
+    height: 6.25rem;
+    line-height: 6.25rem;
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    border: 1px #fff solid;
+    float: left;
+  }
+  .home {
+    margin: 0px 2%;
+    margin-top: 5rem;
+    padding: 1%;
+    width: 96%;
+    height: auto;
+    border-radius: 0.9375rem;
+    background-color: rgba(75, 81, 95, 0.3);
+    box-shadow: 0.4375rem 0.4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+  }
+
+  .box {
+    display: flex;
+    width: 100%;
+    height: 12.5rem;
+    margin: 0 auto;
+    margin-top: 6.25rem;
+  }
+
+  .boxx {
+    width: 3.125rem;
+    height: 6.25rem;
+    line-height: 5rem;
+    float: left;
+    color: #fff;
+    font-size: 6.25rem;
+    text-align: center;
+  }
+
+  .butt {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 3.125rem;
+    width: 100%;
+    margin-top: 3.125rem;
+  }
+
+  .butt button {
+    width: 30%;
+    height: 3.125rem;
+    border: 1px #fff solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.625rem;
+    border-radius: 0.625rem;
+  }
+
+  .fg {
+    width: 18.75rem;
+    background-color: #000;
+    border: 1px #fff solid;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    padding: 0.625rem 1.25rem;
+    display: none;
+  }
+
+  .fge {
+    float: left;
+    text-align: center;
+    width: 12.5rem;
+    height: 100%;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+
+  .fgbox {
+    margin: 0.625rem 0px;
+    height: 3.125rem;
+    width: 18.75rem;
+  }
+
+  .fgbulles {
+    width: 6.25rem;
+    float: left;
+    height: 100%;
+    border: 1px #fff solid;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.25rem;
+  }
+}

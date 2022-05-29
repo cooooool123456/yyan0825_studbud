@@ -24,12 +24,272 @@
 
 /* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
-    
+    .home {
+        margin: 20px auto;
+        width: 43.75rem;
+        height: 36rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    .home .title {
+        margin-top: .625rem;
+        margin-bottom: .625rem;
+        font-size: 2.5rem;
+        text-align:center;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .age {
+        padding-left: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .home .age span {
+        font-size: 1.875rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .age #ageVal {
+        margin-left: .3125rem;
+        height: 3.125rem;
+        width: 25rem;
+        border-radius: .625rem;
+    }
+    .home .concerns {
+        padding-left: .625rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 7.5rem;
+    }
+    .home .concerns .title {
+        width: 6.25rem;
+        font-size: 1.875rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .concerns .text {
+        margin-top: 5.5rem;
+        margin-left: 5.3125rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 25rem;
+        height: 100%;
+    }
+    .home .concerns .text a {
+        display: block;
+        width:9.375rem;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        color: #fff;
+        font-weight: 500;
+        background-color: rgba(75, 81, 95, 0.3);
+        border-radius: 1.25rem;
+    }
+    .home .concerns .text a:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .home .submit {
+        text-align: right;
+        margin-top: 50px;
+        padding: 0px 20px;
+    }
+    .home .submit button {
+        margin-top: .625rem;
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
+    button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+    .home2 {
+        display: none;
+        margin: 20px auto;
+        width: 43.75rem;
+        height: 23rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    .home2 .title1 {
+        text-align: center;
+        font-size: 1.875rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home2 .text1 {
+        margin-top: 2.5rem;
+        padding-left: 1.875rem;
+        text-align: left;
+        font-size: 1.5625rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home2 .submit {
+        text-align: center;
+        margin-top: 50px;
+        padding: 0px 20px;
+    }
+    .home2 .submit button {
+        margin-top: .625rem;
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
 }
 /* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
-    
+    .home {
+        margin: 20px auto;
+        width: 96%;
+        height: 26rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    .home .title {
+        margin-top: .3125rem;
+        margin-bottom:  .3125rem;
+        font-size: 1.5625rem;
+        text-align:center;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .age {
+        padding-left: .3125rem;
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .home .age span {
+        font-size: 1.125rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .age #ageVal {
+        margin-left: .3125rem;
+        height: 2.1875rem;
+        width: 17.2rem;
+        border-radius: .625rem;
+    }
+    .home .concerns {
+        padding-left: .3125rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 7.5rem;
+    }
+    .home .concerns .title {
+        width: 3.125rem;
+        font-size: 1.125rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home .concerns .text {
+        margin-top: 5.5rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 18.75rem;
+        height: 100%;
+    }
+    .home .concerns .text a {
+        display: block;
+        width:6.25rem;
+        height: 2.1875rem;
+        text-align: center;
+        line-height:  2.1875rem;
+        color: #fff;
+        font-weight: 500;
+        background-color: rgba(75, 81, 95, 0.3);
+        border-radius: .625rem;
+        font-size: .875rem;
+        margin: .3125rem;
+    }
+    .home .concerns .text a:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
+    .home .submit {
+        text-align: right;
+        margin-top: 50px;
+        padding: 0px 20px;
+    }
+    .home .submit button {
+        margin-top: .625rem;
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
+    button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .home2 {
+        display: none;
+        margin: 20px auto;
+        width: 96%;
+        height: 23rem;
+        background-color: rgba(75, 81, 95, 0.3);
+        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+        border-radius: .625rem;
+    }
+    .home2 .title1 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home2 .text1 {
+        padding-left: .25rem;
+        margin-top: 2.5rem;
+        text-align: left;
+        font-size: 1.125rem;
+        color: #fff;
+        font-weight: 500;
+    }
+    .home2 .submit {
+        text-align: center;
+        margin-top: 50px;
+        padding: 0px 20px;
+    }
+    .home2 .submit button {
+        margin-top: .625rem;
+        border-color: cornsilk;
+        background-color: rgba(100, 149, 237, .7);
+        color: aliceblue;
+        border-style: hidden;
+        border-radius: .3125rem;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
 } 
 
 

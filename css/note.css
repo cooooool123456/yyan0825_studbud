@@ -41,6 +41,7 @@
     width: 25rem;
     height: 3.125rem;
     font-size: 1.5rem;
+    padding-left: .3125rem;
   }
   .login_button {
     width: 6.25rem;
@@ -91,9 +92,22 @@
     
   }
   .content {
+    width: 100%;
     padding: 0 8rem;
+    margin: 0px auto;
+    text-align: left;
   }
-    
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5625rem;
+    color: #fff;
+    font-weight: 600;
+  }
 }
 /* phone */
 @media screen and (min-width: 200px) and (max-width: 500px) {
@@ -138,6 +152,7 @@
       width: 80%;
   }
   input {
+    padding-left: .3125rem;
       border-radius: .3125rem 0px 0px .3125rem ;
      height: 2.5rem;
   }
@@ -147,5 +162,9 @@
       height: 2.5rem;
       color: #fff;
       font-weight: 600;
+  }
+  #content {
+    padding-left: .3125rem;
+    font-size: 1.2rem;
   }
 }

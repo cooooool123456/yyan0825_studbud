@@ -46,17 +46,22 @@
     </div>
   </div>
   <div class="flex-center flex-column container">
+    <div class="title">Dictionary Lookup</div>
     <div class="search-box flex-center">
       <input id="input" type="text">
       <button onclick="select()" class="search">search</button>
     </div>
     <div id="content" class="flex-column content">
       <h3 id="word"></h3>
+      
     </div>
 
   </div>
   <script>
     async function select () {
+      document.getElementById("content").innerHTML = `
+      <h3 id="word"></h3>
+      `
       const val = document.getElementById('input').value
       const fetchData = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${val}`, {
         method: 'GET',
