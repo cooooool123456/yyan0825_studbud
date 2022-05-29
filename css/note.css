@@ -20,7 +20,7 @@
   }
 }
 
-/* 电脑 */
+/* PC */
 @media screen and (min-width: 500px) and (max-width: 1920px) {
   table {
     text-align: center;
@@ -72,7 +72,15 @@
     height: 2.6rem;
   }
   .search-box input {
-    height: 100%;
+    border-radius: .625rem 0px 0px .625rem ;
+    height: 3.125rem;
+  }
+  .search-box button {
+    border-radius: 0px .625rem .625rem 0px;
+    width: 6.25rem;
+    height: 3.125rem;
+    color: #fff;
+    font-weight: 600;
   }
   .search {
     width: 8rem;
@@ -85,8 +93,9 @@
   .content {
     padding: 0 8rem;
   }
+    
 }
-/* 手机 */
+/* phone */
 @media screen and (min-width: 200px) and (max-width: 500px) {
   /* CSS样式 */
 
@@ -123,5 +132,20 @@
   .login_button:hover {
     cursor: pointer;
     opacity: 0.7;
+  }
+  .search-box {
+      margin-top: 1.25rem;
+      width: 80%;
+  }
+  input {
+      border-radius: .3125rem 0px 0px .3125rem ;
+     height: 2.5rem;
+  }
+  button {
+      border-radius:0px .3125rem   .3125rem 0px;
+      width: 3.75rem;
+      height: 2.5rem;
+      color: #fff;
+      font-weight: 600;
   }
 }

@@ -22,7 +22,7 @@
     }
 } 
 
-/* 电脑 */
+/* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
     .timer {
         margin-top: 1.875rem;
@@ -39,8 +39,16 @@
         width: 12.5rem;
     }
     .my {
+        margin-top: 1.25rem;
+        width: 31.25rem;
+        text-align: center;
+        background-color: aliceblue;
+        box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
         border-radius: 1.25rem;
         font-size: 1.5625rem;
+    }
+    .my p {
+        margin: .625rem 0px;
     }
     .title {
         text-align: center;
@@ -48,8 +56,53 @@
         font-size: 2.5rem;
         font-weight: 600;
     }
+    select {
+        margin-top: .625rem;
+        text-align: center;
+        width: 12.5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+        color: #333333;
+        font-weight: 500;
+    }
+    input {
+        width: 18.75rem;
+        height: 2.5rem;
+    }
+    .radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .radio label {
+        width: 6.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .radio label span {
+        margin: 0px .625rem;
+    }
+    button {
+        width: 12.5rem;
+        height: 2.5rem;
+        border: 1.25rem solid white;
+        border-radius: 50%;
+  
+        color: rgb(167, 150, 150);
+        ;
+        border-style: hidden;
+        border-radius: 15px;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: 1rem;
+    }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
-/* 手机 */
+/* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
     
@@ -70,14 +123,65 @@
         width: 6.25rem;
     }
     .my {
+        margin-top: .625rem;
+        width: 18.75rem;
+        text-align: center;
+        background-color: aliceblue;
+        box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
         border-radius: .625rem;
         font-size: 1.125rem;
+    }
+    .my p {
+        margin: .3125rem 0px;
     }
     .title {
         text-align: center;
         color: #fff;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         font-weight: 600;
+    }
+    select {
+        margin-top: .625rem;
+        text-align: center;
+        width: 6.25rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+        color: #333333;
+        font-weight: 500;
+    }
+    input {
+        width: 9.375rem;
+        height: 2.5rem;
+    }
+    .radio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .radio label {
+        width: 6.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .radio label span {
+        margin: 0px .625rem;
+    }
+    button {
+        width: 12.5rem;
+        height: 2.5rem;
+        border: 1.25rem solid white;
+        border-radius: 50%;
+        color: rgb(167, 150, 150);
+        border-style: hidden;
+        border-radius: 15px;
+        width: 6.25rem;
+        height: 1.9375rem;
+        font-size: .875rem;
+    }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.7;
     }
 } 
 
@@ -107,28 +211,7 @@
       color: rgb(116, 113, 113);
     }
 
-    .my {
-      margin-top: 3.125rem;
-      width: 18.75rem;
-      text-align: center;
-      background-color: aliceblue;
-      box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
-    }
 
-    .login_button {
-
-      border: 1.25rem solid white;
-      border-radius: 50%;
-
-      color: rgb(167, 150, 150);
-      ;
-      border-style: hidden;
-      border-radius: 15px;
-      width: 6.25rem;
-      height: 1.9375rem;
-      font-size: 1rem;
-
-    }
 
 
     input::-ms-input-placeholder {

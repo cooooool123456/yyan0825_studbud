@@ -24,7 +24,7 @@
 .timer {
   margin: 0 auto;
 }
-/* 电脑 */
+/* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
     .timer {
         margin-top: 1.875rem;
@@ -94,7 +94,7 @@
         width: 12.5rem;
     }
 }
-/* 手机 */
+/* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
     

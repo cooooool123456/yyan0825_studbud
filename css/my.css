@@ -21,16 +21,21 @@
     }
 } 
 
-/* 电脑 */
+/* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
 
     .my{
+        display: flex;
+        flex-wrap: wrap;
         margin-top: 18rem;
         border-radius: 1rem;
+        min-height: 12.5rem;
     }
-
+    .my p {
+        width: 100%;
+    }
 }
-/* 手机 */
+/* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
     

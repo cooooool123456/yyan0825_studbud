@@ -18,8 +18,68 @@
   <meta name="msapplication-tap-highlight" content="no">
   <link rel="stylesheet" href="./css/index.css" type="text/css" />
   <link rel="stylesheet" href="./css/List.css" type="text/css">
+  <link rel="stylesheet" href="./css/assign.css" type="text/css" />
   <title>Task list</title>
   <script src="js/audio.js"></script>
+  <style>
+    .status,
+    .delete,
+    .add {
+      padding: 3px 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      color: rgb(167, 150, 150);
+      border-style: hidden;
+      border-radius: 15px;
+      background: #e3e3e3;
+
+    }
+
+
+    .add:hover {
+      opacity: 0.7;
+
+    }
+
+    .status:hover {
+      opacity: 0.7;
+
+    }
+
+    .delete:hover {
+      opacity: 0.7;
+    }
+
+    .High {
+      color: red;
+    }
+
+    .Med {
+      color: blue;
+    }
+
+    .Low {
+      color: green;
+    }
+
+    .container {
+      /* width:auto; */
+      position: relative;
+    }
+
+    .add {
+      width: 6rem;
+      margin-top: 30px;
+    }
+
+    .add-tasks {
+      display: none;
+    }
+
+    .tasks-list {
+      /* display: none; */
+    }
+  </style>
 </head>
 
 <body>
@@ -44,41 +104,197 @@
       <a href="note.html"><img src="icon/note.png" width="50" /></a>
     </div>
   </div>
+  <center id="tasks-list" class="tasks-list">
+    <div class="container">
+      <h2>Task List</h2>
 
-
-
-  <center>
-    <h1>Task List</h1>
+    </div>
     <table id="list">
-      <th>name</th>
-      <th>month</th>
-      <th>date</th>
-      <th>priority</th>
-      <th>time</th>
     </table>
+    <div id="add" class="add">add</div>
+
+  </center>
+  <center id="add-tasks" class="add-tasks">
+    <div class="title">Add Tasks</div>
+    <div class="my">
+      <p>Task name</p>
+      <input type="text" id="name">
+      <p>Due Date:</p>
+      <select id="month">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <select id="date">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      <br>
+      <p>Pariority Rating:</p>
+      <p class="radio">
+        <label><span>High</span><input style="width: auto;" type="radio" name="Pariority" value="High"
+            id="High"></label>
+
+        <label><span>Med</span><input style="width: auto;" type="radio" name="Pariority" value="Med" id="Med"></label>
+
+        <label><span>Low</span><input style="width: auto;" type="radio" name="Pariority" value="Low" id="Low"></label>
+      </p>
+      <p>Estimated Time To Complete:</p>
+      <input type="text" id="time">
+      <br><br>
+      <p><button class="login_button" onclick="register_click()">Submit</button></p>
+      <br>
+    </div>
   </center>
 
   <body>
 
     <script>
-      var list = localStorage.getItem("list");
-      var array = list.split(";");
-      var content = document.getElementById("list").innerHTML.split("</tbody>")[0];
-      for (var i = 0; i < array.length; i++) {
-        var arr = array[i].split("-");
-        if (typeof (arr[0]) != "undefined" && typeof (arr[1]) != "undefined" && typeof (arr[2]) != "undefined" && typeof (arr[3]) != "undefined" && typeof (arr[4]) != "undefined") {
-          var tmp = "<tr>";
-          tmp += "<td>" + arr[0] + "</td>";
-          tmp += "<td>" + arr[1] + "</td>";
-          tmp += "<td>" + arr[2] + "</td>";
-          tmp += "<td>" + arr[3] + "</td>";
-          tmp += "<td>" + arr[4] + "</td>";
+      let list = localStorage.getItem("tasks");
+      if (list == null) {
+        list = [];
+      } else {
+        list = JSON.parse(list)
+      }
+      render()
+      function render () {
+        document.getElementById("list").innerHTML = `
+          <th>name</th>
+          <th>month</th>
+          <th>date</th>
+          <th>priority</th>
+          <th>time</th>
+          <th>status</th>
+          <th>handle</th>
+        `
+        var content = document.getElementById("list").innerHTML.split("</tbody>")[0];
+        for (let i = 0; i < list.length; i++) {
+          let tmp = "<tr>";
+          tmp += "<td>" + list[i].name + "</td>";
+          tmp += "<td>" + list[i].month + "</td>";
+          tmp += "<td>" + list[i].date + "</td>";
+          tmp += "<td>" + `<span class="${list[i].priority}">${list[i].priority}</span>` + "</td>";
+          tmp += "<td>" + list[i].time + "</td>";
+          tmp += "<td>" + `<button class="status" data-key=${i} data-status=${list[i].status} ondblclick="updateStatus(event)">${list[i].status === 0 ? 'Not Done' : 'Done'}</button>` + "</td>";
+          tmp += "<td>" + `<button class="delete" data-key=${i} onclick="deleteTask(event)" class="btn">Delete</button>` + "</td>";
           tmp += "</tr>"
           content += tmp;
         }
+        content += "</tbody></table>";
+        document.getElementById("list").innerHTML = content;
       }
-      content += "</tbody></table>";
-      document.getElementById("list").innerHTML = content;
+
+      function deleteTask (e) {
+        const flag = confirm('delete？')
+        if (flag) {
+          list.splice(e.target.dataset.key, 1)
+          localStorage.setItem("tasks", JSON.stringify(list))
+          render()
+
+        }
+
+      }
+      function updateStatus (e) {
+        console.log(e.target.dataset.key);
+        if (e.target.dataset.status != 0) return
+        const flag = confirm('update status?')
+        if (flag) {
+          list[e.target.dataset.key].status = 1
+          localStorage.setItem("tasks", JSON.stringify(list))
+          render()
+        }
+
+      }
+      document.getElementById('add').onclick = function () {
+        document.getElementById('tasks-list').style.display = 'none';
+        document.getElementById('add-tasks').style.display = 'block';
+
+      }
+    </script>
+    <script>
+      function justify_priority () {
+        var priority;
+        if (document.getElementById("High").checked) {
+          priority = document.getElementById("High").value;
+        }
+        else if (document.getElementById("Med").checked) {
+          priority = document.getElementById("Med").value;
+        }
+        else if (document.getElementById("Low").checked) {
+          priority = document.getElementById("Low").value;
+        }
+        return priority;
+      }
+
+      function register_click () {
+
+        var name = document.getElementById("name").value;
+        var month = document.getElementById("month");
+        var index = month.selectedIndex;
+        var month = month.options[index].value;
+        var date = document.getElementById("date");
+        var index = date.selectedIndex;
+        var date = date.options[index].value;
+        var priority = justify_priority();
+        var time = document.getElementById("time").value;
+        var date = {
+          name,
+          month,
+          date,
+          priority: priority || "Low",
+          time,
+          status: 0
+        }
+        var list = localStorage.getItem("tasks");
+        if (list == null) {
+          list = [];
+        } else {
+          list = JSON.parse(list)
+        }
+        list.push(date);
+        localStorage.setItem("tasks", JSON.stringify(list));
+        alert('add succeed');
+         document.getElementById('tasks-list').style.display = 'block';
+        document.getElementById('add-tasks').style.display = 'none';
+      }
     </script>
   </body>
 

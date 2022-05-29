@@ -21,16 +21,30 @@
     }
 } 
 
-/* 电脑 */
+/* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
     #list {
         width: 80%;
     }
+   
     th {
+        height: 2.5rem;
         font-size: 1.25rem;
+        background-color:#96C7ED;
+        color:#000000;
+        border:1px inset #ffffff;
+    }
+    td, td {
+        height: 1.875rem;
+        font-size:.875rem;
+        text-align:center;
+        border-collapse:collapse;
+        border: 1px solid #73b4e7;
+        border-width:1px 0 1px 0;
+        border:1px inset #ffffff;
     }
 }
-/* 手机 */
+/* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
     
@@ -40,25 +54,25 @@
     #list {
         width: 100%;
     }
+    th {
+        height: 2.5rem;
+        font-size: 1.25rem;
+        background-color:#96C7ED;
+        color:#000000
+    }
+    td, td {
+        height: 1.875rem;
+        font-size:.875rem;
+        text-align:center;
+        border-collapse:collapse;
+        border: 1px solid #73b4e7;
+        border-width:1px 0 1px 0;
+        border:2px inset #ffffff;
+    }
 } 
 
 table{
     text-align: center;
-}
-th {
-background-color:#96C7ED;
-color:#000000
-}
-
-td, td {
-font-size:0.95em;
-text-align:center;
-padding:.25rem;
-border-collapse:collapse;
-
-border: 1px solid #73b4e7;
-border-width:1px 0 1px 0;
-border:2px inset #ffffff;
 }
 
 tr {

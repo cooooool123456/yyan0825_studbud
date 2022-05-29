@@ -54,9 +54,9 @@
     </div>
   </center>
   <script>
-    var sex = localStorage.getItem("sex");
-    var email = localStorage.getItem("email");
-    var username = localStorage.getItem("username");
+    var sex = localStorage.getItem("sex") || "Not Login！";
+    var email = localStorage.getItem("email") || "Not Login！";
+    var username = localStorage.getItem("username") || "Not Login！";
     console.log(sex);
     document.getElementById("email").innerHTML = "Email: " + email;
     document.getElementById("username").innerHTML = "username: " + username;

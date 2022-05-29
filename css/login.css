@@ -22,7 +22,7 @@
     }
 } 
 
-/* 电脑 */
+/* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
     #loginDiv {
         margin-top: 8rem;
@@ -65,8 +65,12 @@
         height: 1.9375rem;
         font-size: 1rem;
     }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
-/* 手机 */
+/* phone */
 @media screen  and (min-width:200px)  and (max-width:500px) {
     /* CSS样式 */
     
@@ -118,6 +122,10 @@
         width: 6.25rem;
         height: 1.9375rem;
         font-size: 1rem;
+    }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.7;
     }
 } 
 
