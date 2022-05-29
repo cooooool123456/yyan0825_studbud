@@ -18,6 +18,7 @@
   <meta name="x5-page-mode" content="app">
   <meta name="msapplication-tap-highlight" content="no">
   <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <script src="js/audio.js"></script>
   <title>Register</title>
   <style>
     html {
@@ -58,6 +59,7 @@
       text-align: center;
       height: 37.5rem;
       background-color: white;
+      border-radius: 1rem;
       box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
     }
 
@@ -115,25 +117,29 @@
 </head>
 
 <body>
-  <p id="logo">E</p>
-  <div>
+  <audio id="audio">
+    <source src="sound.mp3" type="audio/mpeg">
+  </audio>
+  <header class="flex-sb">
+    <p id="logo">E</p>
     <nav id="nav-bar" class="nav-link">
       <a href="index.html" class="nav-link">Easytask</a> |
       <a href="list.html" class="nav-link">Task-list</a> |
       <a href="my.html" class="nav-link">My</a> |
       <a href="login.html" class="nav-link">Login</a>
     </nav>
-  </div>
-  <br><br><br>
-  <audio controls>
-    <source src="sound.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+
+  </header>
+
   <div class="timer">
-    <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-    <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    <img id="lb" class="lb" src="img/lb1.png">
+    <div>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    </div>
   </div>
-  <br><br>
+
+
   <center>
     <div class="register">
       <h3>Register now</h3>

@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="./css/index.css" type="text/css" />
   <link rel="stylesheet" href="./css/note.css" type="text/css" />
   <title>Acronym Maker</title>
+  <script src="js/audio.js"></script>
 
 </head>
 
@@ -68,7 +69,7 @@
       const { word, meanings } = fetchResponse[0];
       document.getElementById('word').innerHTML = word
       console.log(meanings);
-      const result = meanings.map((item,key) => {
+      const result = meanings.map((item, key) => {
         // console.log(item.partOfSpeech);//词性
         // console.log(item.definitions); //定义
         // console.log(item.synonyms); // 同义词

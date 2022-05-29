@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="./css/index.css" type="text/css" />
   <link rel="stylesheet" href="./css/modify.css" type="text/css" />
   <title>Modify Task</title>
+  <script src="js/audio.js"></script>
 
 </head>
 
@@ -26,22 +27,22 @@
   <audio id="audio">
     <source src="sound.mp3" type="audio/mpeg">
   </audio>
-  <p id="logo">E</p>
-  <div>
+  <header class="flex-sb">
+    <p id="logo">E</p>
     <nav id="nav-bar" class="nav-link">
       <a href="index.html" class="nav-link">Easytask</a> |
       <a href="list.html" class="nav-link">Task-list</a> |
       <a href="my.html" class="nav-link">My</a> |
       <a href="login.html" class="nav-link">Login</a>
     </nav>
-  </div>
 
-  
-  <div class = "timer">
-    <img class="lb" src="img/lb1.png">
+  </header>
+
+  <div class="timer">
+    <img id="lb" class="lb" src="img/lb1.png">
     <div>
-        <a href = "timer.html"><img src = "icon/timer.png" width="50"/></a>
-        <a href = "note.html"><img src = "icon/note.png" width="50"/></a>
+      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
+      <a href="note.html"><img src="icon/note.png" width="50" /></a>
     </div>
   </div>
 
@@ -109,9 +110,10 @@
       <br>
       <div class="title">Pariority Rating:</div>
       <div class="radio-box">
-        <label><span>High</span> <input style="width: auto;" type="radio" name="Pariority" value="High" id="High"></label>
-        <label><span>Med</span>  <input style="width: auto;" type="radio" name="Pariority" value="Med" id="Med"></label>
-        <label><span>Low</span>  <input style="width: auto;" type="radio" name="Pariority" value="Low" id="Low"></label>
+        <label><span>High</span> <input style="width: auto;" type="radio" name="Pariority" value="High"
+            id="High"></label>
+        <label><span>Med</span> <input style="width: auto;" type="radio" name="Pariority" value="Med" id="Med"></label>
+        <label><span>Low</span> <input style="width: auto;" type="radio" name="Pariority" value="Low" id="Low"></label>
       </div>
       <div class="title">Estimated Time To Complete:</div>
       <input type="text" id="time">
