@@ -91,7 +91,6 @@
     <nav id="nav-bar" class="nav-link">
       <a href="index.html" class="nav-link">Easytask</a> |
       <a href="list.html" class="nav-link">Task-list</a> |
-      <a href="my.html" class="nav-link">My</a> |
       <a href="login.html" class="nav-link">Login</a>
     </nav>
 
@@ -179,7 +178,7 @@
       </p>
       <p>Estimated Time To Complete:</p>
        <div class="textIpt">
-          <input type="text" id="time">hour<input type="text" id="time2">seconds
+          <input type="text" id="time">hour<input type="text" id="time2">minutes
        </div>
       <br><br>
       <p><button class="login_button" onclick="register_click()">Submit</button></p>
@@ -226,16 +225,27 @@
       }
 
       function deleteTask (e) {
+        let list = localStorage.getItem("tasks");
+        if (list == null) {
+          list = [];
+        } else {
+          list = JSON.parse(list)
+        }
         const flag = confirm('delete？')
         if (flag) {
           list.splice(e.target.dataset.key, 1)
           localStorage.setItem("tasks", JSON.stringify(list))
           render()
-
         }
 
       }
       function updateStatus (e) {
+        let list = localStorage.getItem("tasks");
+        if (list == null) {
+          list = [];
+        } else {
+          list = JSON.parse(list)
+        }
         console.log(e.target.dataset.key);
         if (e.target.dataset.status != 0) return
         const flag = confirm('update status?')
