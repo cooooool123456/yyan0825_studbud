@@ -1,26 +1,18 @@
-
-
-@media screen  and (min-width:1500px) and (max-width:1700px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-} 
-@media screen  and (min-width:1200px) and (max-width:1500px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 15px;
-    }
-} 
-@media screen  and (min-width:1000px) and (max-width:1200px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 14px;
-    }
-} 
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 /* PC */
 @media screen  and (min-width:500px)  and (max-width:1920px) { 
@@ -81,7 +73,7 @@
     }
     .home .concerns .text a {
         display: block;
-        width:9.375rem;
+        width:11.375rem;
         height: 3rem;
         text-align: center;
         line-height: 3rem;
@@ -117,8 +109,9 @@
     .home2 {
         display: none;
         margin: 20px auto;
+        padding-bottom: 20px;
         width: 43.75rem;
-        height: 23rem;
+        min-height: 23rem;
         background-color: rgba(75, 81, 95, 0.3);
         box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
         border-radius: .625rem;
@@ -255,7 +248,7 @@
         display: none;
         margin: 20px auto;
         width: 96%;
-        height: 23rem;
+        height: 36rem;
         background-color: rgba(75, 81, 95, 0.3);
         box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
         border-radius: .625rem;
@@ -267,6 +260,7 @@
         font-weight: 500;
     }
     .home2 .text1 {
+        overflow: hidden;
         padding-left: .25rem;
         margin-top: 2.5rem;
         text-align: left;
@@ -292,4 +286,117 @@
     }
 } 
 
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .home .age span {
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .home .age #ageVal {
+    margin-left: 0.3125rem;
+    height: 2.1875rem;
+    width: 17.2rem;
+    border-radius: 0.625rem;
+  }
+  .home .concerns {
+    padding-left: 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 7.5rem;
+  }
+  .home .concerns .title {
+    width: 3.125rem;
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .home .concerns .text {
+    margin-top: 5.5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 18.75rem;
+    height: 100%;
+  }
+  .home .concerns .text a {
+    display: block;
+    width: 6.25rem;
+    height: 2.1875rem;
+    text-align: center;
+    line-height: 2.1875rem;
+    color: #fff;
+    font-weight: 500;
+    background-color: rgba(75, 81, 95, 0.3);
+    border-radius: 0.625rem;
+    font-size: 0.875rem;
+    margin: 0.3125rem;
+  }
+  .home .concerns .text a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  .home .submit {
+    text-align: right;
+    margin-top: 50px;
+    padding: 0px 20px;
+  }
+  .home .submit button {
+    margin-top: 0.625rem;
+    border-color: cornsilk;
+    background-color: rgba(100, 149, 237, 0.7);
+    color: aliceblue;
+    border-style: hidden;
+    border-radius: 0.3125rem;
+    width: 6.25rem;
+    height: 1.9375rem;
+    font-size: 1rem;
+  }
+  button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
 
+  .home2 {
+    display: none;
+    margin: 20px auto;
+    width: 96%;
+    height: 23rem;
+    background-color: rgba(75, 81, 95, 0.3);
+    box-shadow: 0.4375rem 0.4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+    border-radius: 0.625rem;
+  }
+  .home2 .title1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .home2 .text1 {
+    padding-left: 0.25rem;
+    margin-top: 2.5rem;
+    text-align: left;
+    font-size: 1.125rem;
+    color: #fff;
+    font-weight: 500;
+  }
+  .home2 .submit {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0px 20px;
+  }
+  .home2 .submit button {
+    margin-top: 0.625rem;
+    border-color: cornsilk;
+    background-color: rgba(100, 149, 237, 0.7);
+    color: aliceblue;
+    border-style: hidden;
+    border-radius: 0.3125rem;
+    width: 6.25rem;
+    height: 1.9375rem;
+    font-size: 1rem;
+  }
+}

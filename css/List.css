@@ -1,89 +1,81 @@
-
-@media screen  and (min-width:1500px) and (max-width:1700px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-} 
-@media screen  and (min-width:1200px) and (max-width:1500px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 15px;
-    }
-} 
-@media screen  and (min-width:1000px) and (max-width:1200px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 14px;
-    }
-} 
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 /* PC */
-@media screen  and (min-width:500px)  and (max-width:1920px) { 
-    #list {
-        width: 80%;
-    }
-   
-    th {
-        height: 2.5rem;
-        font-size: 1.25rem;
-        background-color:#96C7ED;
-        color:#000000;
-        border:1px inset #ffffff;
-    }
-    td, td {
-        height: 1.875rem;
-        font-size:.875rem;
-        text-align:center;
-        border-collapse:collapse;
-        border: 1px solid #73b4e7;
-        border-width:1px 0 1px 0;
-        border:1px inset #ffffff;
-    }
-    
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+  #list {
+    width: 80%;
+  }
+
+  th {
+    height: 2.5rem;
+    font-size: 1.25rem;
+    background-color: #96c7ed;
+    color: #000000;
+    border: 1px inset #ffffff;
+  }
+  td,
+  td {
+    height: 1.875rem;
+    font-size: 0.875rem;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #73b4e7;
+    border-width: 1px 0 1px 0;
+    border: 1px inset #ffffff;
+  }
 }
 /* phone */
-@media screen  and (min-width:200px)  and (max-width:500px) {
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-    #list {
-        width: 100%;
-    }
-    th {
-        height: 2.5rem;
-        font-size: 1.25rem;
-        background-color:#96C7ED;
-        color:#000000
-    }
-    td, td {
-        height: 1.875rem;
-        font-size:.875rem;
-        text-align:center;
-        border-collapse:collapse;
-        border: 1px solid #73b4e7;
-        border-width:1px 0 1px 0;
-        border:2px inset #ffffff;
-    }
-} 
-
-table{
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  #list {
+    width: 100%;
+  }
+  th {
+    height: 2.5rem;
+    font-size: 1.25rem;
+    background-color: #96c7ed;
+    color: #000000;
+  }
+  td,
+  td {
+    height: 1.875rem;
+    font-size: 0.875rem;
     text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #73b4e7;
+    border-width: 1px 0 1px 0;
+    border: 2px inset #ffffff;
+  }
+}
+
+table {
+  text-align: center;
 }
 
 tr {
-border: 1px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
-tr:nth-child(odd){
-background-color:#dcecf9;
+tr:nth-child(odd) {
+  background-color: #dcecf9;
 }
 
-tr:nth-child(even){
-background-color:#ffffff;
+tr:nth-child(even) {
+  background-color: #ffffff;
 }

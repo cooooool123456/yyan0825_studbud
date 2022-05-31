@@ -1,20 +1,14 @@
 @media screen and (min-width: 1500px) and (max-width: 1700px) {
-  /* CSS样式 */
-
   html {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
-  /* CSS样式 */
-
   html {
     font-size: 15px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
-  /* CSS样式 */
-
   html {
     font-size: 14px;
   }
@@ -22,8 +16,6 @@
 
 /* PC */
 @media screen and (min-width: 500px) and (max-width: 1920px) {
-
-
   .time {
     width: 12.375rem;
     height: 12.375rem;
@@ -106,8 +98,6 @@
 }
 /* phone */
 @media screen and (min-width: 200px) and (max-width: 500px) {
-  /* CSS样式 */
-
   html {
     font-size: 16px;
   }

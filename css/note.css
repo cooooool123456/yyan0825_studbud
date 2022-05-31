@@ -1,20 +1,14 @@
 @media screen and (min-width: 1500px) and (max-width: 1700px) {
-  /* CSS样式 */
-
   html {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1500px) {
-  /* CSS样式 */
-
   html {
     font-size: 15px;
   }
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
-  /* CSS样式 */
-
   html {
     font-size: 14px;
   }
@@ -41,7 +35,7 @@
     width: 25rem;
     height: 3.125rem;
     font-size: 1.5rem;
-    padding-left: .3125rem;
+    padding-left: 0.3125rem;
   }
   .login_button {
     width: 6.25rem;
@@ -69,15 +63,15 @@
   }
   .search-box {
     width: 100%;
-    margin-top:3rem;
+    margin-top: 3rem;
     height: 2.6rem;
   }
   .search-box input {
-    border-radius: .625rem 0px 0px .625rem ;
+    border-radius: 0.625rem 0px 0px 0.625rem;
     height: 3.125rem;
   }
   .search-box button {
-    border-radius: 0px .625rem .625rem 0px;
+    border-radius: 0px 0.625rem 0.625rem 0px;
     width: 6.25rem;
     height: 3.125rem;
     color: #fff;
@@ -89,7 +83,6 @@
     cursor: pointer;
   }
   #word {
-    
   }
   .content {
     width: 100%;
@@ -111,8 +104,6 @@
 }
 /* phone */
 @media screen and (min-width: 200px) and (max-width: 500px) {
-  /* CSS样式 */
-
   html {
     font-size: 16px;
   }
@@ -148,23 +139,23 @@
     opacity: 0.7;
   }
   .search-box {
-      margin-top: 1.25rem;
-      width: 80%;
+    margin-top: 1.25rem;
+    width: 80%;
   }
   input {
-    padding-left: .3125rem;
-      border-radius: .3125rem 0px 0px .3125rem ;
-     height: 2.5rem;
+    padding-left: 0.3125rem;
+    border-radius: 0.3125rem 0px 0px 0.3125rem;
+    height: 2.5rem;
   }
   button {
-      border-radius:0px .3125rem   .3125rem 0px;
-      width: 3.75rem;
-      height: 2.5rem;
-      color: #fff;
-      font-weight: 600;
+    border-radius: 0px 0.3125rem 0.3125rem 0px;
+    width: 3.75rem;
+    height: 2.5rem;
+    color: #fff;
+    font-weight: 600;
   }
   #content {
-    padding-left: .3125rem;
+    padding-left: 0.3125rem;
     font-size: 1.2rem;
   }
 }

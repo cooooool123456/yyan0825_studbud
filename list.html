@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=no, email=no" />
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="MobileOptimized" content="320">
-  <meta name="x5-orientation" content="portrait">
-  <meta name="x5-fullscreen" content="true">
-  <meta name="browsermode" content="application">
-  <meta name="x5-page-mode" content="app">
-  <meta name="msapplication-tap-highlight" content="no">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/index.css" type="text/css" />
   <link rel="stylesheet" href="./css/List.css" type="text/css">
   <link rel="stylesheet" href="./css/assign.css" type="text/css" />
@@ -99,8 +87,8 @@
   <div class="timer">
     <img id="lb" class="lb" src="img/lb1.png">
     <div>
-      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+      <a href="timer.html"><img src="icon/timer.jpg" width="50" /></a>
+      <a href="note.html"><img src="icon/note.jpg" width="50" /></a>
     </div>
   </div>
   <center id="tasks-list" class="tasks-list">
@@ -177,9 +165,9 @@
         <label><span>Low</span><input style="width: auto;" type="radio" name="Pariority" value="Low" id="Low"></label>
       </p>
       <p>Estimated Time To Complete:</p>
-       <div class="textIpt">
-          <input type="text" id="time">hour<input type="text" id="time2">minutes
-       </div>
+      <div class="textIpt">
+        <input type="text" id="time">hour<input type="text" id="time2">minutes
+      </div>
       <br><br>
       <p><button class="login_button" onclick="register_click()">Submit</button></p>
       <br>
@@ -189,7 +177,7 @@
   <body>
 
     <script>
-      
+
       render()
       function render () {
         let list = localStorage.getItem("tasks");
@@ -289,14 +277,14 @@
         var priority = justify_priority();
         var time = document.getElementById("time").value;
         var time2 = document.getElementById("time2").value;
-        time = time +":" + time2;
+        time = time + ":" + time2;
         var date = {
           name,
           month,
           date,
           priority: priority || "Low",
           time,
-          status:0
+          status: 0
         }
         var list = localStorage.getItem("tasks");
         if (list == null) {
@@ -307,9 +295,9 @@
         list.push(date);
         localStorage.setItem("tasks", JSON.stringify(list));
         alert('add succeed');
-         document.getElementById('tasks-list').style.display = 'block';
-         document.getElementById('add-tasks').style.display = 'none';
-         render();
+        document.getElementById('tasks-list').style.display = 'block';
+        document.getElementById('add-tasks').style.display = 'none';
+        render();
       }
     </script>
   </body>

@@ -235,12 +235,6 @@ html {
   color: aliceblue;
 }
 
-#nav-bar {
-  /* position: fixed; */
-  /* top: 0;
-  right: 0; */
-}
-
 #logo {
   font-size: 1.25rem;
   padding-top: 0.625rem;
@@ -260,7 +254,6 @@ th {
   font-size: small;
 }
 
-
 a {
   text-decoration: none;
   color: black;
@@ -273,44 +266,39 @@ header {
   margin: 0 auto;
 }
 /* PC */
-@media screen  and (min-width:500px)  and (max-width:1920px) { 
-    .timer {
-        margin-top: 1.875rem;
-        /* width: 100%; */
-        width:1200px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .timer img {
-        width: 3.125rem;
-        cursor: pointer;
-    }
-    .timer div {
-        text-align: right;
-        width: 12.5rem;
-    }
-
-
-
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+  .timer {
+    margin-top: 1.875rem;
+    /* width: 100%; */
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .timer img {
+    width: 3.125rem;
+    cursor: pointer;
+  }
+  .timer div {
+    text-align: right;
+    width: 12.5rem;
+  }
 }
 /* phone */
-@media screen  and (min-width:200px)  and (max-width:500px) {
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-    .timer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top:1.25rem;
-    } 
-    .timer img{
-        width: 1.875rem;
-    }
-    .timer div {
-        text-align: right;
-        width: 6.25rem;
-    }
-} 
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  .timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+  .timer img {
+    width: 1.875rem;
+  }
+  .timer div {
+    text-align: right;
+    width: 6.25rem;
+  }
+}

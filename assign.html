@@ -1,96 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" type="text/css" />
+    <link rel="stylesheet" href="./css/assign.css" type="text/css" />
+    <title>Assign</title>
+  </head>
 
-<head>
-  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=no, email=no" />
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="MobileOptimized" content="320">
-  <meta name="x5-orientation" content="portrait">
-  <meta name="x5-fullscreen" content="true">
-  <meta name="browsermode" content="application">
-  <meta name="x5-page-mode" content="app">
-  <meta name="msapplication-tap-highlight" content="no">
-  <link rel="stylesheet" href="./css/index.css" type="text/css" />
-  <link rel="stylesheet" href="./css/assign.css" type="text/css" />
-  <title>Assign</title>
-  
-</head>
+  <body>
+    <audio id="audio">
+      <source src="sound.mp3" type="audio/mpeg" />
+    </audio>
+    <header class="flex-sb">
+      <p id="logo">E</p>
+      <nav id="nav-bar" class="nav-link">
+        <a href="index.html" class="nav-link">Easytask</a>
+        |
+        <a href="list.html" class="nav-link">Task-list</a>
+        |
+        <a href="login.html" class="nav-link">Login</a>
+      </nav>
+    </header>
 
-<body>
-  <audio id="audio">
-    <source src="sound.mp3" type="audio/mpeg">
-  </audio>
-  <header class="flex-sb">
-    <p id="logo">E</p>
-    <nav id="nav-bar" class="nav-link">
-      <a href="index.html" class="nav-link">Easytask</a> |
-      <a href="list.html" class="nav-link">Task-list</a> |
-      <a href="login.html" class="nav-link">Login</a>
-    </nav>
-  
-  </header>
-  
-  <div class="timer">
-    <img id="lb" class="lb" src="img/lb1.png">
-    <div>
-      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    <div class="timer">
+      <img id="lb" class="lb" src="img/lb1.png" />
+      <div>
+        <a href="timer.html"><img src="icon/timer.jpg" width="50" /></a>
+        <a href="note.html"><img src="icon/note.jpg" width="50" /></a>
+      </div>
     </div>
-  </div>
 
-
-  <script>
-    function justify_priority () {
-      var priority;
-      if (document.getElementById("High").checked) {
-        priority = document.getElementById("High").value;
+    <script>
+      function justify_priority() {
+        var priority;
+        if (document.getElementById('High').checked) {
+          priority = document.getElementById('High').value;
+        } else if (document.getElementById('Med').checked) {
+          priority = document.getElementById('Med').value;
+        } else if (document.getElementById('Low').checked) {
+          priority = document.getElementById('Low').value;
+        }
+        return priority;
       }
-      else if (document.getElementById("Med").checked) {
-        priority = document.getElementById("Med").value;
-      }
-      else if (document.getElementById("Low").checked) {
-        priority = document.getElementById("Low").value;
-      }
-      return priority;
-    }
 
-    function register_click () {
+      function register_click() {
+        var name = document.getElementById('name').value;
+        var month = document.getElementById('month');
+        var index = month.selectedIndex;
+        var month = month.options[index].value;
+        var date = document.getElementById('date');
+        var index = date.selectedIndex;
+        var date = date.options[index].value;
+        var priority = justify_priority();
+        var time = document.getElementById('time').value;
+        var date = {
+          name,
+          month,
+          date,
+          priority: priority || 'Low',
+          time,
+          status: 0,
+        };
+        var list = localStorage.getItem('tasks');
+        if (list == null) {
+          list = [];
+        } else {
+          list = JSON.parse(list);
+        }
+        list.push(date);
 
-      var name = document.getElementById("name").value;
-      var month = document.getElementById("month");
-      var index = month.selectedIndex;
-      var month = month.options[index].value;
-      var date = document.getElementById("date");
-      var index = date.selectedIndex;
-      var date = date.options[index].value;
-      var priority = justify_priority();
-      var time = document.getElementById("time").value;
-      var date = {
-        name,
-        month,
-        date,
-        priority: priority || "Low",
-        time,
-        status:0
+        localStorage.setItem('tasks', JSON.stringify(list));
       }
-      var list = localStorage.getItem("tasks");
-      if (list == null) {
-        list = [];
-      } else {
-        list = JSON.parse(list)
-      }
-      list.push(date);
-
-      localStorage.setItem("tasks", JSON.stringify(list));
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

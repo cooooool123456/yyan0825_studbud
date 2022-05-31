@@ -1,164 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/register.css" type="text/css" />
+    <script src="js/audio.js"></script>
+    <title>Register</title>
+  </head>
 
-<head>
-  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=no, email=no" />
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="MobileOptimized" content="320">
-  <meta name="x5-orientation" content="portrait">
-  <meta name="x5-fullscreen" content="true">
-  <meta name="browsermode" content="application">
-  <meta name="x5-page-mode" content="app">
-  <meta name="msapplication-tap-highlight" content="no">
-  <link rel="stylesheet" href="css/index.css" type="text/css" />
-  <link rel="stylesheet" href="css/register.css" type="text/css" />
-  <script src="js/audio.js"></script>
-  <title>Register</title>
+  <body>
+    <audio id="audio">
+      <source src="sound.mp3" type="audio/mpeg" />
+    </audio>
+    <header class="flex-sb">
+      <p id="logo">E</p>
+      <nav id="nav-bar" class="nav-link">
+        <a href="index.html" class="nav-link">Easytask</a>
+        |
+        <a href="list.html" class="nav-link">Task-list</a>
+        |
+        <a href="login.html" class="nav-link">Login</a>
+      </nav>
+    </header>
 
-</head>
-
-<body>
-  <audio id="audio">
-    <source src="sound.mp3" type="audio/mpeg">
-  </audio>
-  <header class="flex-sb">
-    <p id="logo">E</p>
-    <nav id="nav-bar" class="nav-link">
-      <a href="index.html" class="nav-link">Easytask</a> |
-      <a href="list.html" class="nav-link">Task-list</a> |
-      <a href="login.html" class="nav-link">Login</a>
-    </nav>
-
-  </header>
-
-  <div class="timer">
-    <img id="lb" class="lb" src="img/lb1.png">
-    <div>
-      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+    <div class="timer">
+      <img id="lb" class="lb" src="img/lb1.png" />
+      <div>
+        <a href="timer.html"><img src="icon/timer.jpg" width="50" /></a>
+        <a href="note.html"><img src="icon/note.jpg" width="50" /></a>
+      </div>
     </div>
-  </div>
 
+    <center>
+      <div class="register">
+        <div class="title">Register now</div>
+        <div class="title">Email</div>
+        <p><input type="text" id="email" /></p>
+        <div class="title2">Username</div>
+        <p><input type="text" id="username" /></p>
+        <div class="title2">Gender</div>
+        <p class="radio">
+          <label>
+            <span>Male</span>
+            <input
+              style="width: auto"
+              type="radio"
+              name="sex"
+              value="Male"
+              id="sex_man"
+            />
+          </label>
 
-  <center>
-    <div class="register">
-      <div class="title">Register now</div>
-      <div class="title">Email</div>
-      <p><input type="text" id="email"></p>
-      <div class="title2">Username</div>
-      <p><input type="text" id="username"></p>
-      <div class="title2">Gender</div>
-      <p class="radio">
-        
-        <label><span>Male</span><input style="width: auto;" type="radio" name="sex" value="Male" id="sex_man"></label>
-        
-        <label><span>Female</span><input style="width: auto;" type="radio" name="sex" value="Female" id="sex_woman"></label>
-      </p>
-      <div class="title2">Password</div>
-      <p ><input type="password" id="password1"></p>
-      <div class="title2">Confirm password</div>
-      <p><input type="password" id="password2"></p>
-      <p><button type="button" class="register_button" name="register" onclick="register_click()" value="Register">Register</button></p>
-      <p><button class="login_button" onclick="login_click()">Login</button></p>
-    </div>
-    <script>
-      var flag1 = true;
-      var flag2 = true;
-      var flag3 = true;
+          <label>
+            <span>Female</span>
+            <input
+              style="width: auto"
+              type="radio"
+              name="sex"
+              value="Female"
+              id="sex_woman"
+            />
+          </label>
+        </p>
+        <div class="title2">Password</div>
+        <p><input type="password" id="password1" /></p>
+        <div class="title2">Confirm password</div>
+        <p><input type="password" id="password2" /></p>
+        <p>
+          <button
+            type="button"
+            class="register_button"
+            name="register"
+            onclick="register_click()"
+            value="Register"
+          >
+            Register
+          </button>
+        </p>
+        <p>
+          <button class="login_button" onclick="login_click()">Login</button>
+        </p>
+      </div>
+      <script>
+        var flag1 = true;
+        var flag2 = true;
+        var flag3 = true;
 
-      email.onchange = function () {
-        var email = this.value;
-        var emailPattern = /^[a-zA-Z0-9]{1,20}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}$/;
-        if (!(emailPattern.test(email))) {
-          alert("Invalid Email");
-          flag1 = false;
-        }
-        else {
-          flag1 = true;
-        }
-
-      }
-
-
-      username.onchange = function () {
-        var username = this.value;
-        var usernamePattern = /^\S{1,20}$/;
-        if (!usernamePattern.test(username)) {
-          alert("Username length cannot exceed 20");
-          flag2 = false;
-        }
-        else {
-          flag2 = true;
-        }
-
-      }
-
-
-      password1.onchange = function () {
-        var password1 = this.value;
-        var passwordPattern = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,}$/;
-        if (!passwordPattern.test(password1)) {
-          alert("The password format is incorrect, the length is at least 6 digits, and it is a combination of numbers and letters");
-          flag3 = false;
-        }
-        else {
-          flag3 = true;
-        }
-
-      }
-
-      function justify_sex () {
-        var sex;
-        if (document.getElementById("sex_man").checked) {
-          sex = document.getElementById("sex_man").value;
-        }
-        else if (document.getElementById("sex_woman").checked) {
-          sex = document.getElementById("sex_woman").value;
-        }
-        return sex;
-      }
-
-      function register_click () {
-
-        var username = document.getElementById("username").value;
-        var password1 = document.getElementById("password1").value;
-        var password2 = document.getElementById("password2").value;
-        var email = document.getElementById("email").value;
-        var sex = justify_sex();
-
-
-        localStorage.setItem("username", username);
-        localStorage.setItem("password", password1);
-        localStorage.setItem("sex", sex);
-        localStorage.setItem("email", email);
-
-
-        if (flag1 && flag2 && flag3 && password1 != '') {
-          if (password1 == password2) {
-            alert("Registration success!");
-            window.location.href = "login.html";
+        email.onchange = function () {
+          var email = this.value;
+          var emailPattern =
+            /^[a-zA-Z0-9]{1,20}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}$/;
+          if (!emailPattern.test(email)) {
+            alert('Invalid Email');
+            flag1 = false;
+          } else {
+            flag1 = true;
           }
-          else {
-            alert("The password entered twice is not the same!");
+        };
+
+        username.onchange = function () {
+          var username = this.value;
+          var usernamePattern = /^\S{1,20}$/;
+          if (!usernamePattern.test(username)) {
+            alert('Username length cannot exceed 20');
+            flag2 = false;
+          } else {
+            flag2 = true;
+          }
+        };
+
+        password1.onchange = function () {
+          var password1 = this.value;
+          var passwordPattern = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,}$/;
+          if (!passwordPattern.test(password1)) {
+            alert(
+              'The password format is incorrect, the length is at least 6 digits, and it is a combination of numbers and letters'
+            );
+            flag3 = false;
+          } else {
+            flag3 = true;
+          }
+        };
+
+        function justify_sex() {
+          var sex;
+          if (document.getElementById('sex_man').checked) {
+            sex = document.getElementById('sex_man').value;
+          } else if (document.getElementById('sex_woman').checked) {
+            sex = document.getElementById('sex_woman').value;
+          }
+          return sex;
+        }
+
+        function register_click() {
+          var username = document.getElementById('username').value;
+          var password1 = document.getElementById('password1').value;
+          var password2 = document.getElementById('password2').value;
+          var email = document.getElementById('email').value;
+          var sex = justify_sex();
+
+          localStorage.setItem('username', username);
+          localStorage.setItem('password', password1);
+          localStorage.setItem('sex', sex);
+          localStorage.setItem('email', email);
+
+          if (flag1 && flag2 && flag3 && password1 != '') {
+            if (password1 == password2) {
+              alert('Registration success!');
+              window.location.href = 'login.html';
+            } else {
+              alert('The password entered twice is not the same!');
+            }
+          } else {
+            alert(
+              'The information format is incorrect, please enter the correct information!'
+            );
           }
         }
-        else {
-          alert("The information format is incorrect, please enter the correct information!")
+
+        function login_click() {
+          window.location.href = 'login.html';
         }
-      }
-
-      function login_click () {
-        window.location.href = "login.html";
-      }
-    </script>
-  </center>
-</body>
-
+      </script>
+    </center>
+  </body>
 </html>

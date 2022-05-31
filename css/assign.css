@@ -1,229 +1,214 @@
-
-
-@media screen  and (min-width:1500px) and (max-width:1700px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-} 
-@media screen  and (min-width:1200px) and (max-width:1500px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 15px;
-    }
-} 
-@media screen  and (min-width:1000px) and (max-width:1200px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 14px;
-    }
-} 
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
 
 /* PC */
-@media screen  and (min-width:500px)  and (max-width:1920px) { 
-    .timer {
-        margin-top: 1.875rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .timer img {
-        width: 3.125rem;
-        cursor: pointer;
-    }
-    .timer div {
-        text-align: right;
-        width: 12.5rem;
-    }
-    .my {
-        margin-top: 1.25rem;
-        width: 31.25rem;
-        text-align: center;
-        background-color: aliceblue;
-        box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
-        border-radius: 1.25rem;
-        font-size: 1.5625rem;
-    }
-    .my p {
-        margin: .625rem 0px;
-    }
-    .title {
-        text-align: center;
-        color: #fff;
-        font-size: 2.5rem;
-        font-weight: 600;
-    }
-    select {
-        margin-top: .625rem;
-        text-align: center;
-        width: 12.5rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-        color: #333333;
-        font-weight: 500;
-    }
-    input {
-        width: 18.75rem;
-        height: 2.5rem;
-    }
-    .textIpt {
-        width: 100%;
-    }
-    .textIpt input {
-        width: 5rem ;
-    }
-    .radio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .radio label {
-        width: 6.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .radio label span {
-        margin: 0px .625rem;
-    }
-    button {
-        width: 12.5rem;
-        height: 2.5rem;
-        border: 1.25rem solid white;
-        border-radius: 50%;
-  
-        color: rgb(167, 150, 150);
-        ;
-        border-style: hidden;
-        border-radius: 15px;
-        width: 6.25rem;
-        height: 1.9375rem;
-        font-size: 1rem;
-    }
-    button:hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+  .timer {
+    margin-top: 1.875rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .timer img {
+    width: 3.125rem;
+    cursor: pointer;
+  }
+  .timer div {
+    text-align: right;
+    width: 12.5rem;
+  }
+  .my {
+    margin-top: 1.25rem;
+    width: 31.25rem;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
+    border-radius: 1.25rem;
+    font-size: 1.5625rem;
+  }
+  .my p {
+    margin: 0.625rem 0px;
+  }
+  .title {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  select {
+    margin-top: 0.625rem;
+    text-align: center;
+    width: 12.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    color: #333333;
+    font-weight: 500;
+  }
+  input {
+    width: 18.75rem;
+    height: 2.5rem;
+  }
+  .textIpt {
+    width: 100%;
+  }
+  .textIpt input {
+    width: 5rem;
+  }
+  .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio label {
+    width: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio label span {
+    margin: 0px 0.625rem;
+  }
+  button {
+    width: 12.5rem;
+    height: 2.5rem;
+    border: 1.25rem solid white;
+    border-radius: 50%;
+
+    color: rgb(167, 150, 150);
+    border-style: hidden;
+    border-radius: 15px;
+    width: 6.25rem;
+    height: 1.9375rem;
+    font-size: 1rem;
+  }
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
 }
 /* phone */
-@media screen  and (min-width:200px)  and (max-width:500px) {
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-    .timer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top:1.25rem;
-    } 
-    .timer img{
-        width: 1.875rem;
-    }
-    .timer div {
-        text-align: right;
-        width: 6.25rem;
-    }
-    .my {
-        margin-top: .625rem;
-        width: 18.75rem;
-        text-align: center;
-        background-color: aliceblue;
-        box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
-        border-radius: .625rem;
-        font-size: 1.125rem;
-    }
-    .my p {
-        margin: .3125rem 0px;
-    }
-    .title {
-        text-align: center;
-        color: #fff;
-        font-size: 1.125rem;
-        font-weight: 600;
-    }
-    select {
-        margin-top: .625rem;
-        text-align: center;
-        width: 6.25rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-        color: #333333;
-        font-weight: 500;
-    }
-    input {
-        width: 9.375rem;
-        height: 2.5rem;
-    }
-    .radio {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .radio label {
-        width: 6.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .radio label span {
-        margin: 0px .625rem;
-    }
-    button {
-        width: 12.5rem;
-        height: 2.5rem;
-        border: 1.25rem solid white;
-        border-radius: 50%;
-        color: rgb(167, 150, 150);
-        border-style: hidden;
-        border-radius: 15px;
-        width: 6.25rem;
-        height: 1.9375rem;
-        font-size: .875rem;
-    }
-    button:hover {
-        cursor: pointer;
-        opacity: 0.7;
-    }
-} 
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  .timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+  .timer img {
+    width: 1.875rem;
+  }
+  .timer div {
+    text-align: right;
+    width: 6.25rem;
+  }
+  .my {
+    margin-top: 0.625rem;
+    width: 18.75rem;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
+    border-radius: 0.625rem;
+    font-size: 1.125rem;
+  }
+  .my p {
+    margin: 0.3125rem 0px;
+  }
+  .title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  select {
+    margin-top: 0.625rem;
+    text-align: center;
+    width: 6.25rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    color: #333333;
+    font-weight: 500;
+  }
+  input {
+    width: 9.375rem;
+    height: 2.5rem;
+  }
+  .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio label {
+    width: 6.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .radio label span {
+    margin: 0px 0.625rem;
+  }
+  button {
+    width: 12.5rem;
+    height: 2.5rem;
+    border: 1.25rem solid white;
+    border-radius: 50%;
+    color: rgb(167, 150, 150);
+    border-style: hidden;
+    border-radius: 15px;
+    width: 6.25rem;
+    height: 1.9375rem;
+    font-size: 0.875rem;
+  }
+  button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
 
-    html {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      -moz-background-size: 100% 100%;
-    }
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -moz-background-size: 100% 100%;
+}
 
-    body {
-      align-items: center;
-      justify-content: center;
-      height: 100%;
+body {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 
-    }
+input {
+  border: none;
+  border-bottom: 1px solid rgb(10, 10, 10);
+}
 
-    input {
-      border: none;
-      border-bottom: 1px solid rgb(10, 10, 10);
-    }
+p {
+  text-align: center;
+  color: rgb(116, 113, 113);
+}
 
-    p {
-      text-align: center;
-      color: rgb(116, 113, 113);
-    }
+input::-ms-input-placeholder {
+  text-align: center;
+}
 
-
-
-
-    input::-ms-input-placeholder {
-      text-align: center;
-    }
-
-    input::-webkit-input-placeholder {
-      text-align: center;
-    }
+input::-webkit-input-placeholder {
+  text-align: center;
+}

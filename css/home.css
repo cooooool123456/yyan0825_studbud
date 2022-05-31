@@ -1,163 +1,152 @@
-
-
-@media screen  and (min-width:1500px) and (max-width:1700px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-} 
-@media screen  and (min-width:1200px) and (max-width:1500px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 15px;
-    }
-} 
-@media screen  and (min-width:1000px) and (max-width:1200px){
-    /* CSS样式 */
-    
-    html {
-        font-size: 14px;
-    }
-} 
+@media screen and (min-width: 1500px) and (max-width: 1700px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1500px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  html {
+    font-size: 14px;
+  }
+}
 .timer {
   margin: 0 auto;
 }
 /* PC */
-@media screen  and (min-width:500px)  and (max-width:1920px) { 
-    .timer {
-        margin-top: 1.875rem;
-        /* width: 100%; */
-        width:1200px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .timer img {
-        width: 3.125rem;
-        cursor: pointer;
-    }
-    .timer div {
-        text-align: right;
-        width: 12.5rem;
-    }
-    .home {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 40px auto;
-        width:1200px;
-        border-radius: .9375rem;
-        background-color: rgba(75, 81, 95, 0.3);
-        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
-    }
-    .home .title1 {
-        margin-top: 1.25rem;
-        padding-left: 1.25rem;
-        width: 100%;
-        text-align: left;
-        font-size: 1.875rem;
-        color: #fff;
-        font-weight: 600;
-    }
-    .home .title2 {
-        padding-left: 1.25rem;
-        width: 100%;
-        text-align: left;
-        font-size: 1.6rem;
-        color: #fff;
-        font-weight: 600;
-    }      
-    .bottom-img {
-        width: 40%;
-    }
-    .bottom-img img {
-        width: 100%;
-    }
-    .menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 20px;
-        
-        width: 60%;
-    }
-    .menu .item-menu {
-        text-align: center;
-        width: 12.5rem;
-    }
-    .menu .item-menu a {
-        font-size: .875rem;
-        color: #fff;
-        font-weight: 600;
-    }
-    .menu .item-menu img {
-        width: 12.5rem;
-    }
+@media screen and (min-width: 500px) and (max-width: 1920px) {
+  .timer {
+    margin-top: 1.875rem;
+    /* width: 100%; */
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .timer img {
+    width: 3.125rem;
+    cursor: pointer;
+  }
+  .timer div {
+    text-align: right;
+    width: 12.5rem;
+  }
+  .home {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    width: 1200px;
+    border-radius: 0.9375rem;
+    background-color: rgba(75, 81, 95, 0.3);
+    box-shadow: 0.4375rem 0.4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+  }
+  .home .title1 {
+    margin-top: 1.25rem;
+    padding-left: 1.25rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1.875rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .home .title2 {
+    padding-left: 1.25rem;
+    width: 100%;
+    text-align: left;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .bottom-img {
+    width: 40%;
+  }
+  .bottom-img img {
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+
+    width: 60%;
+  }
+  .menu .item-menu {
+    text-align: center;
+    width: 12.5rem;
+  }
+  .menu .item-menu a {
+    font-size: 0.875rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .menu .item-menu img {
+    width: 12.5rem;
+  }
 }
 /* phone */
-@media screen  and (min-width:200px)  and (max-width:500px) {
-    /* CSS样式 */
-    
-    html {
-        font-size: 16px;
-    }
-    .timer {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-top:1.25rem;
-    } 
-    .timer img{
-        width: 1.875rem;
-    }
-    .timer div {
-        text-align: right;
-        width: 6.25rem;
-    }
-    .home {
-        margin: 0px 2%;
-        margin-top: 5.25rem;
-        width:96%;
-        min-height: 25rem;
-        border-radius: .9375rem;
-        background-color: rgba(75, 81, 95, 0.3);
-        box-shadow: .4375rem .4375rem 1.0625rem rgba(52, 56, 66, 0.5);
-    }
-    .home .title1 {
-        text-align: center;
-        font-size: 1.6rem;
-        color: #fff;
-        font-weight: 600;
-    }
-    .home .title2 {
-        text-align: center;
-        font-size: 1.25rem;
-        color: #fff;
-        font-weight: 600;
-    }      
-    .bottom-img {
-        width: 100%;
-        
-    }
-    .bottom-img img {
-        width: 100%;
-    }
-    .menu {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-    }
-    .menu .item-menu {
-        text-align: center;
-        width: 30%;
-    }
-    .menu .item-menu a {
-        font-size: .875rem;
-        color: #fff;
-        font-weight: 600;
-    }
-    .menu .item-menu img {
-        width: 100%;
-    }
-} 
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  html {
+    font-size: 16px;
+  }
+  .timer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+  }
+  .timer img {
+    width: 1.875rem;
+  }
+  .timer div {
+    text-align: right;
+    width: 6.25rem;
+  }
+  .home {
+    margin: 0px 2%;
+    margin-top: 5.25rem;
+    width: 96%;
+    min-height: 25rem;
+    border-radius: 0.9375rem;
+    background-color: rgba(75, 81, 95, 0.3);
+    box-shadow: 0.4375rem 0.4375rem 1.0625rem rgba(52, 56, 66, 0.5);
+  }
+  .home .title1 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .home .title2 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .bottom-img {
+    width: 100%;
+  }
+  .bottom-img img {
+    width: 100%;
+  }
+  .menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .menu .item-menu {
+    text-align: center;
+    width: 30%;
+  }
+  .menu .item-menu a {
+    font-size: 0.875rem;
+    color: #fff;
+    font-weight: 600;
+  }
+  .menu .item-menu img {
+    width: 100%;
+  }
+}

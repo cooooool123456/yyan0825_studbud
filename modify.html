@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-  <meta http-equiv="" Content-Type" content=" = " text/html; charset="utf-8">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="format-detection" content="telephone=no, email=no" />
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="true">
-  <meta name="MobileOptimized" content="320">
-  <meta name="x5-orientation" content="portrait">
-  <meta name="x5-fullscreen" content="true">
-  <meta name="browsermode" content="application">
-  <meta name="x5-page-mode" content="app">
-  <meta name="msapplication-tap-highlight" content="no">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/index.css" type="text/css" />
   <link rel="stylesheet" href="./css/modify.css" type="text/css" />
   <title>Modify Task</title>
@@ -40,8 +28,8 @@
   <div class="timer">
     <img id="lb" class="lb" src="img/lb1.png">
     <div>
-      <a href="timer.html"><img src="icon/timer.png" width="50" /></a>
-      <a href="note.html"><img src="icon/note.png" width="50" /></a>
+      <a href="timer.html"><img src="icon/timer.jpg" width="50" /></a>
+      <a href="note.html"><img src="icon/note.jpg" width="50" /></a>
     </div>
   </div>
 
@@ -57,7 +45,7 @@
         <div class="text">
             <a>grammar</a>
             <a>logic</a>
-            <a>words</a>
+            <a>vocabulary</a>
             <a>writing</a>
         </div>
       </div>
@@ -66,8 +54,8 @@
         <div class="text">
             <a>English</a>
             <a>Chinese</a>
-            <a>French</a>
-            <a>...</a>
+            <!-- <a>French</a> -->
+            <!-- <a>...</a> -->
         </div>
       </div>
       <div class="submit"><button onclick="submit()">complete</button></div>
@@ -86,23 +74,82 @@
 
 <script>
     let arr1 = [
-      "https://www.baidu.com",
-      "https://www.google.cn",
-      "https://www.microsoftstore.com.cn",
-      "https://www.microsoftstore.com.cn"
-    ] 
+      "https://www.englishclub.com/grammar/rules.htm",
+      "https://www.fluentu.com/blog/english/english-grammar-tips/",
+      "https://grammar.yourdictionary.com/grammar-rules-and-tips/11-rules-of-grammar.html",
+      "https://www.lexico.com/grammar/grammar-tips",
+      "https://www.csi.cuny.edu/students/academic-assistance/writing-across-curriculum/grammar-tips-and-tricks"
+    ],arr2 =[
+      "https://www.masterclass.com/articles/tips-for-improving-your-writing-style",
+      "https://www.grammarly.com/blog/writing-tips/",
+      "https://smartblogger.com/writing-tips/",
+      "https://jerryjenkins.com/writing-tips/",
+    ], arr3 = [
+      'https://englishlive.ef.com/blog/language-lab/improve-english-vocabulary-10-top-tips/',
+      'https://oupeltglobalblog.com/2021/03/15/learning-english-vocabulary-2/',
+      'https://www.englishclub.com/efl/articles/7-tips-for-learning-english-vocabulary/',
+      'https://www.fluentu.com/blog/how-to-learn-vocabulary-tips/'
+    ],arr4 = [
+         'https://www.writerscollegeblog.com/create-perfect-logical-flow-in-your-writing/',
+          'https://www.cuyamaca.edu/student-support/tutoring-center/files/student-resources/logical-flow-in-writing.pdf',
+          'https://www.servicescape.com/blog/using-logical-reasoning-in-academic-writing'
+    ],arr5 = [
+      'http://www.kewo.com/article/14831',
+      'https://www.mypitaya.com/101251.html',
+      'https://m.spiiker.com/study-res/writing/112054690.html'
+    ],arr6 = [
+      'https://www.mifengtd.cn/articles/15-practical-tips-to-becoming-a-better-writer.html',
+      'https://new.qq.com/omn/20210225/20210225A07FT800.html',
+      'https://teachinghand.com/blog/the-art-of-writing-an-argumentative-essay/',
+
+    ],arr7 = [
+      'https://www.sohu.com/a/270575339_100150530',
+      'https://www.cnfla.com/yingyu/661918.html',
+      'https://www.zhihu.com/question/20058435'
+    ],
+    arr8 = [
+      'https://zhuanlan.zhihu.com/p/31640525',
+      'https://kknews.cc/media/vym8r2q.html',
+      'https://ppfocus.com/0/ed247bc4f.html'
+    ];
+
+
 
     function render() {
       document.querySelector('.textUrl').innerHTML = "";
       let concernsobj = localStorage.getItem('concerns')?JSON.parse(localStorage.getItem('concerns')):[];
-      if (concernsobj.concerns == "grammar"){
-        document.querySelector('.textUrl').innerHTML = `<div class="text1">${arr1[0]}</div>`
-      }else if (concernsobj.concerns == "words") {
-        document.querySelector('.textUrl').innerHTML = `<div class="text1">${arr1[1]}</div>`
-      }else if (concernsobj.concerns == "logic") {
-        document.querySelector('.textUrl').innerHTML = `<div class="text1">${arr1[2]}</div>`
-      }else if (concernsobj.concerns == "writing") {
-        document.querySelector('.textUrl').innerHTML = `<div class="text1">${arr1[3]}</div>`
+      if (concernsobj.concerns == "grammar" && concernsobj.concerns2 == "English"){
+        arr1.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "vocabulary" && concernsobj.concerns2 == "English") {
+        arr3.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML+= `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "logic" && concernsobj.concerns2 == "English") {
+        arr4.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "writing" && concernsobj.concerns2 == "English") {
+        arr2.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "grammar" && concernsobj.concerns2 == "Chinese"){
+        arr5.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "vocabulary" && concernsobj.concerns2 == "Chinese"){
+        arr6.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "logic" && concernsobj.concerns2 == "Chinese"){
+        arr8.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
+      }else if (concernsobj.concerns == "writing" && concernsobj.concerns2 == "Chinese"){
+        arr7.forEach(((item,key) => {
+          document.querySelector('.textUrl').innerHTML += `<div class="text1">${key+1}.${item}</div>`
+        }))
       }
       
     }
@@ -114,6 +161,7 @@
     if (concernsObj) {
       document.querySelector('.home').style.display = "none";
       document.querySelector('.home2').style.display = "block";
+      render();
     }else {
       document.querySelector('.home').style.display = "block";
       document.querySelector('.home2').style.display = "none";
@@ -146,7 +194,7 @@
           one.style.background = "rgba(75, 81, 95, 0.3)";
         })
         event.target.style.background = "red";
-        let concerns2 = event.target.textContent;
+        concerns2 = event.target.textContent;
       }
     })
 
