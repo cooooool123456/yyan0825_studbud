@@ -69,6 +69,12 @@
         width: 18.75rem;
         height: 2.5rem;
     }
+    .textIpt {
+        width: 100%;
+    }
+    .textIpt input {
+        width: 5rem ;
+    }
     .radio {
         display: flex;
         justify-content: center;

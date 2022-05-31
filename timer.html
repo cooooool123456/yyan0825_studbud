@@ -68,11 +68,8 @@
     let times = 0;
     let timem = 0;
     let zt_ks = false;
-    let fg = Array();
-    let defaultDuration = 1000 * 60 * 1;
-    let defaultStopDuration = 1000 * 60 * 2;
-    let StopNumber = 4;
-    let defaultDurationTime = 0;
+
+
     function fill0 (num) {
       if (num >= 0 && num < 10) {
         return '0' + num
@@ -82,11 +79,9 @@
 
     setInterval(() => {
       if (zt_ks) {
-        defaultDurationTime++;
+
         timem++;
-        if (defaultDurationTime * 1000 === defaultDuration) {
-          timing();
-        }
+
       }
       if (timem == 60) {
         timem = 0;
@@ -102,31 +97,8 @@
 
     }, 1000);
 
-    function timing () {
-      alert('停止');
-      zt_ks = false;
-      StopNumber--;
-      if (StopNumber >= 0) {
-        setTimeout(() => {
-          zt_ks = true;
-          alert('开始');
-        }, defaultStopDuration)
+   
 
-      }
-
-
-    }
-    function dele (i) {
-      fg[i] = "";
-      document.getElementById("fg").innerHTML = "";
-      for (let i = 0; i < fg.length; i++)
-        document.getElementById("fg").innerHTML += fg[i];
-      if (document.getElementById("fg").innerHTML == "") {
-        fg = Array();
-        document.getElementById("fg").style.display = "none";
-      }
-
-    }
 
     function bulle (i) {
       switch (i) {

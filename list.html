@@ -178,7 +178,9 @@
         <label><span>Low</span><input style="width: auto;" type="radio" name="Pariority" value="Low" id="Low"></label>
       </p>
       <p>Estimated Time To Complete:</p>
-      <input type="text" id="time">
+       <div class="textIpt">
+          <input type="text" id="time">hour<input type="text" id="time2">seconds
+       </div>
       <br><br>
       <p><button class="login_button" onclick="register_click()">Submit</button></p>
       <br>
@@ -188,14 +190,15 @@
   <body>
 
     <script>
-      let list = localStorage.getItem("tasks");
-      if (list == null) {
-        list = [];
-      } else {
-        list = JSON.parse(list)
-      }
+      
       render()
       function render () {
+        let list = localStorage.getItem("tasks");
+        if (list == null) {
+          list = [];
+        } else {
+          list = JSON.parse(list)
+        }
         document.getElementById("list").innerHTML = `
           <th>name</th>
           <th>month</th>
@@ -275,13 +278,15 @@
         var date = date.options[index].value;
         var priority = justify_priority();
         var time = document.getElementById("time").value;
+        var time2 = document.getElementById("time2").value;
+        time = time +":" + time2;
         var date = {
           name,
           month,
           date,
           priority: priority || "Low",
           time,
-          status: 0
+          status:0
         }
         var list = localStorage.getItem("tasks");
         if (list == null) {
@@ -293,7 +298,8 @@
         localStorage.setItem("tasks", JSON.stringify(list));
         alert('add succeed');
          document.getElementById('tasks-list').style.display = 'block';
-        document.getElementById('add-tasks').style.display = 'none';
+         document.getElementById('add-tasks').style.display = 'none';
+         render();
       }
     </script>
   </body>
